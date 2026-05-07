@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinchintirapie – Escuela Carnavalera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="logo%20chinchitirapie%20.png" class="logo-wrap">
+        <div class="logo-img">
+            <img src="logo%20chinchitirapie%20.png" alt="Logo Chinchintirapie"></div>
+        <div class="logo-text">
+            <span>Chinchintirapie</span>
+            <span>Escuela Carnavalera</span>
+        </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+
+        <li class="has-dropdown" id="dd-escuela">
+            <button>Escuela <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#historia">Historia</a>
+                <a href="#organizacion">Organización</a>
+            </div>
+        </li>
+
+        <li class="has-dropdown" id="dd-noticias">
+            <button>Noticias <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#hitos">Hitos Recientes</a>
+                <a href="#cronicas">Crónicas</a>
+            </div>
+        </li>
+
+        <li class="has-dropdown" id="dd-archivo">
+            <button>Archivo <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#repositorio">Repositorio</a>
+                <a href="#cedoc">CEDOC</a>
+            </div>
+        </li>
+
+        <li><a href="#tienda" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">
+    🥁 ¡20 años haciendo carnaval en la calle! &nbsp;&nbsp;🎺 Próximas fechas: 19 horas · 23 feb · 23 mar &nbsp;&nbsp;🪘 Nuevas inscripciones abiertas para Percusión Murga &nbsp;&nbsp;🎭 Proyectos comunitarios activos en toda la ciudad &nbsp;&nbsp;💃 Danza Andina · Diseño de Vestuario · Teatro Callejero &nbsp;&nbsp;
+  </span>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="float-shape"></div>
+    <div class="float-shape"></div>
+    <div class="float-shape"></div>
+
+    <div class="hero-content">
+        <div class="hero-badge">✦ Escuela Carnavalera ✦</div>
+        <h1 class="hero-title"><em>20 años</em> de carnaval en la calle</h1>
+        <p class="hero-sub">Donde la música, el baile y la cultura latinoamericana se encuentran para transformar la ciudad en una fiesta viva.</p>
+        <div class="hero-btns">
+            <a href="#historia" class="btn btn-primary">🎭 Conoce la historia</a>
+            <a href="#repositorio" class="btn btn-secondary">📚 Explorar archivo</a>
+        </div>
+    </div>
+    <div class="scroll-hint">Descubrir</div>
+</section>
+
+<!-- CARDS -->
+<section class="cards-section" id="hitos">
+    <div class="section-header reveal">
+        <h2>Lo que hace <span>vibrar</span> la escuela</h2>
+        <div class="deco-line"><span>🎶</span></div>
+        <p>Archivo, crónicas y ensayos que documentan 20 años de fiesta comunitaria.</p>
+    </div>
+    <div class="cards-grid">
+        <div class="card reveal">
+            <div class="card-img card-img-1">
+                <div class="card-img-inner">📂</div>
+                <span class="card-tag">Archivo</span>
+            </div>
+            <div class="card-body">
+                <h3>Repositorio Documental</h3>
+                <p>Fotografías, audiovisuales y documentos de todas las ediciones del carnaval, desde los primeros ensayos hasta los últimos desfiles.</p>
+                <a href="#repositorio" class="card-link">Explorar →</a>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-img card-img-2">
+                <div class="card-img-inner">📰</div>
+                <span class="card-tag">Crónicas</span>
+            </div>
+            <div class="card-body">
+                <h3>Noticias y Crónicas</h3>
+                <p>Relatos, entrevistas y notas periodísticas que cuentan la historia viva de la escuela y sus protagonistas en las calles.</p>
+                <a href="#cronicas" class="card-link">Leer más →</a>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <div class="card-img card-img-3">
+                <div class="card-img-inner">✍️</div>
+                <span class="card-tag">Ensayos</span>
+            </div>
+            <div class="card-body">
+                <h3>CEDOC – Ensayos</h3>
+                <p>Centro de documentación con ensayos académicos y reflexiones culturales sobre el carnaval como arte y práctica comunitaria.</p>
+                <a href="#cedoc" class="card-link">Consultar →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 20 AÑOS -->
+<section class="años-section" id="historia">
+    <div class="años-inner">
+        <div class="años-visual reveal">
+            <div class="años-number">20</div>
+            <div class="años-badge-ring">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path id="circ" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" fill="none"/>
+                    <text font-family="Bangers,cursive" font-size="14" fill="#C0392B" letter-spacing="4">
+                        <textPath href="#circ">★ CHINCHINTIRAPIE ★ ESCUELA CARNAVALERA ★ DESDE 2004 ★ </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <div class="años-text reveal">
+            <h2>Dos décadas haciendo <span>carnaval</span> con el barrio</h2>
+            <p>Chinchintirapie nació en las calles como una apuesta por recuperar la cultura popular latinoamericana a través del cuerpo, el ritmo y la comunidad. En 20 años hemos formado cientos de artistas, construido redes comunitarias y llevado el carnaval a cada rincón de la ciudad.</p>
+            <p>Nuestra misión es que la fiesta sea de todos: sin importar edad, origen o experiencia previa. La escuela es un espacio de encuentro, creación y transformación social.</p>
+            <div class="stats-row">
+                <div class="stat-box"><span class="num">500+</span><span class="label">Estudiantes</span></div>
+                <div class="stat-box"><span class="num">20</span><span class="label">Años</span></div>
+                <div class="stat-box"><span class="num">4</span><span class="label">Talleres</span></div>
+                <div class="stat-box"><span class="num">∞</span><span class="label">Fiesta</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TALLERES -->
+<section class="talleres-section" id="organizacion">
+    <div class="section-header reveal">
+        <h2 style="color:#fff;">Nuestros <span style="color:var(--amarillo);">Talleres</span></h2>
+        <div class="deco-line"><span>🥁</span></div>
+        <p>Cuatro disciplinas que forman el corazón de la escuela carnavalera.</p>
+    </div>
+    <div class="talleres-grid">
+        <div class="taller-card reveal">
+            <div class="taller-icon">🥁</div>
+            <h3>Percusión Murga</h3>
+            <p>Ritmos colectivos, bombo, redoblante y platillos. La base que mueve el carnaval.</p>
+        </div>
+        <div class="taller-card reveal">
+            <div class="taller-icon">💃</div>
+            <h3>Danza Andina</h3>
+            <p>Movimiento corporal inspirado en tradiciones andinas y caribeñas fusionadas.</p>
+        </div>
+        <div class="taller-card reveal">
+            <div class="taller-icon">👗</div>
+            <h3>Diseño de Vestuario</h3>
+            <p>Creación de trajes y disfraces carnavaleros con materiales reciclados y artesanales.</p>
+        </div>
+        <div class="taller-card reveal">
+            <div class="taller-icon">🎭</div>
+            <h3>Teatro Callejero</h3>
+            <p>Performance, zancos, máscara y dramaturgia popular para el espacio público.</p>
+        </div>
+    </div>
+</section>
+
+<!-- EVENTOS -->
+<section class="eventos-section" id="cronicas">
+    <div class="eventos-inner">
+        <div class="eventos-text">
+            <h2>🎉 Próximos Eventos</h2>
+            <p>¡No te pierdas las próximas fechas del carnaval!</p>
+            <a href="#contacto" class="btn btn-primary" style="margin-top:1.2rem; background:#fff; color:var(--rojo);">Ver calendario completo</a>
+        </div>
+        <div class="eventos-list">
+            <div class="evento-item">
+                <span class="evento-fecha">19 hrs</span>
+                <span class="evento-nombre">Ensayo General – Nono 380</span>
+            </div>
+            <div class="evento-item">
+                <span class="evento-fecha">23 Feb</span>
+                <span class="evento-nombre">Desfile de Carnaval – Nono 380</span>
+            </div>
+            <div class="evento-item">
+                <span class="evento-fecha">23 Mar</span>
+                <span class="evento-nombre">Cierre de Temporada – Nono 380</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <span class="brand-name">Chinchintirapie</span>
+            <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la calle junto a la comunidad.</p>
+            <div class="social-row">
+                <a class="social-btn" href="#">📘</a>
+                <a class="social-btn" href="#">📸</a>
+                <a class="social-btn" href="#">▶️</a>
+                <a class="social-btn" href="#">🐦</a>
+            </div>
+        </div>
+        <div class="footer-col" id="repositorio">
+            <h4>Escuela</h4>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#organizacion">Organización</a></li>
+                <li><a href="#organizacion">Nuestros talleres</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="cedoc">
+            <h4>Archivo</h4>
+            <ul>
+                <li><a href="#repositorio">Repositorio</a></li>
+                <li><a href="#cedoc">CEDOC</a></li>
+                <li><a href="#cronicas">Crónicas</a></li>
+                <li><a href="#hitos">Hitos recientes</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="tienda">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Únete a la murga</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
