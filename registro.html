@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro – Chinchintirapie</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="auth-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="logo%20chinchitirapie%20.png" alt="Logo Chinchintirapie">
+            </div>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+            <li><a href="login.html" class="nav-cta">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="auth-container">
+        <!-- Misma caja visual del modal, como página standalone -->
+        <div class="auth-modal-box auth-standalone">
+
+            <div class="auth-modal-header">
+                <img src="logo%20chinchitirapie%20.png" alt="Logo" class="auth-logo-img">
+                <h1 class="auth-modal-title">Registrarse</h1>
+                <p class="auth-modal-subtitle">Escuela Carnavalera</p>
+            </div>
+
+            <div class="auth-panel">
+                <form class="portal-form" novalidate>
+                    <div class="form-group">
+                        <label for="reg-name">Nombre Completo</label>
+                        <input type="text" id="reg-name" placeholder="Tu nombre" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Correo Electrónico</label>
+                        <input type="email" id="reg-email" placeholder="tu@correo.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-taller">Taller de Interés</label>
+                        <select id="reg-taller" required>
+                            <option value="" disabled selected>Selecciona un taller</option>
+                            <option value="percusion">🥁 Percusión Murga</option>
+                            <option value="danza">💃 Danza Andina</option>
+                            <option value="vestuario">👗 Diseño de Vestuario</option>
+                            <option value="teatro">🎭 Teatro Callejero</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-msg">¿Por qué quieres unirte? <span
+                                style="font-weight:400;opacity:.65">(Opcional)</span></label>
+                        <textarea id="reg-msg" rows="3" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="reg-password">Contraseña</label>
+                            <input type="password" id="reg-password" placeholder="Mín. 8 car."
+                                autocomplete="new-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password2">Confirmar</label>
+                            <input type="password" id="reg-password2" placeholder="Repite" autocomplete="new-password"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-btn-wrap">
+                        <button type="submit" class="portal-btn portal-btn-register">
+                            Unirme a la Escuela
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

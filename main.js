@@ -41,3 +41,67 @@ window.addEventListener('scroll', () => {
         a.style.color = a.getAttribute('href') === '#' + current ? 'var(--amarillo)' : '';
     });
 });
+
+/* ══════════════════════════════════════════
+   AUTH MODAL – Abrir / Cerrar / Tabs
+══════════════════════════════════════════ */
+(function () {
+    const modal      = document.getElementById('auth-modal');
+    const btnOpen    = document.getElementById('btn-acceso');
+    const btnClose   = document.getElementById('btn-close-modal');
+    const tabs       = document.querySelectorAll('.auth-tab');
+    const panels     = document.querySelectorAll('.auth-panel');
+
+    function openModal(tabId) {
+        modal.removeAttribute('hidden');
+        document.body.style.overflow = 'hidden';
+        if (tabId) switchTab(tabId);
+        // Focus the close button for accessibility
+        setTimeout(() => btnClose && btnClose.focus(), 50);
+    }
+
+    function closeModal() {
+        modal.setAttribute('hidden', '');
+        document.body.style.overflow = '';
+        btnOpen && btnOpen.focus();
+    }
+
+    function switchTab(targetId) {
+        tabs.forEach(tab => {
+            const isActive = tab.id === targetId;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive);
+        });
+        panels.forEach(panel => {
+            if (panel.id === targetId.replace('tab-', 'panel-')) {
+                panel.removeAttribute('hidden');
+            } else {
+                panel.setAttribute('hidden', '');
+            }
+        });
+    }
+
+    // Abrir modal con el botón de la navbar
+    btnOpen && btnOpen.addEventListener('click', e => {
+        e.stopPropagation();
+        openModal('tab-login');
+    });
+
+    // Cerrar con el botón ✕
+    btnClose && btnClose.addEventListener('click', closeModal);
+
+    // Cerrar al hacer clic en el overlay (fuera del box)
+    modal && modal.addEventListener('click', e => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+    });
+
+    // Cambio de tab
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.id));
+    });
+})();
