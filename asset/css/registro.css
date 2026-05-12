@@ -1,0 +1,49 @@
+.input-password-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.input-password-wrap input {
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.toggle-pass {
+    position: absolute;
+    top: 50%;
+    right: .75rem;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    font-size: 1rem;
+
+    transition:
+        background .2s ease,
+        transform .15s ease;
+}
+
+.toggle-pass:hover {
+    background: rgba(212, 160, 23, .14);
+}
+
+.toggle-pass:active {
+    transform: translateY(-50%) scale(.92);
+}
+
+.toggle-pass:focus {
+    outline: 2px solid var(--dorado);
+    outline-offset: 2px;
+}

@@ -5,84 +5,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro – Chinchintirapie</title>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="../asset/css/styles.css">
+    <link rel="stylesheet" href="../asset/css/registro.css">
+    <link rel="stylesheet" href="../asset/css/auth.css">
 </head>
 
 <body class="auth-page">
+
     <main class="auth-container">
+
         <div class="auth-modal-box auth-standalone">
 
+            <!-- HEADER -->
             <div class="auth-modal-header">
+
                 <a href="../index.html">
-                    <img src="../asset/img/logo-chinchitirapie.png" alt="Logo" class="auth-logo-img">
+                    <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie" class="auth-logo-img">
                 </a>
+
                 <h1 class="auth-modal-title">Registrarse</h1>
-                <p class="auth-modal-subtitle">Escuela Carnavalera</p>
+
+                <p class="auth-modal-subtitle">
+                    Escuela Carnavalera
+                </p>
+
             </div>
 
-            <!-- Tabs igual que en login -->
-            <div class="auth-tabs">
-                <button class="auth-tab active" onclick="location.href='registro.html'">Registrarse</button>
-            </div>
-
+            <!-- PANEL -->
             <div class="auth-panel">
+
                 <form class="portal-form" id="registerForm" novalidate>
+
+                    <!-- NOMBRE -->
                     <div class="form-group">
-                        <label for="reg-name">Nombre Completo</label>
-                        <input type="text" id="reg-name" placeholder="Tu nombre" autocomplete="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-email">Correo Electrónico</label>
-                        <input type="email" id="reg-email" placeholder="tu@correo.com" autocomplete="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-taller">Taller de Interés</label>
-                        <select id="reg-taller" required>
-                            <option value="" disabled selected>Selecciona un taller</option>
-                            <option value="percusion">🥁 Percusión Murga</option>
-                            <option value="danza">💃 Danza Andina</option>
-                            <option value="vestuario">👗 Diseño de Vestuario</option>
-                            <option value="teatro">🎭 Teatro Callejero</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-msg">¿Por qué quieres unirte?
-                            <span style="font-weight:400;opacity:.65">(Opcional)</span>
+
+                        <label for="reg-name">
+                            Nombre Completo
                         </label>
+
+                        <input type="text" id="reg-name" placeholder="Tu nombre" autocomplete="name" required>
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="reg-email">
+                            Correo Electrónico
+                        </label>
+
+                        <input type="email" id="reg-email" placeholder="tu@correo.com" autocomplete="email" required>
+
+                    </div>
+
+                    <!-- TALLER -->
+                    <div class="form-group">
+
+                        <label for="reg-taller">
+                            Taller de Interés
+                        </label>
+
+                        <select id="reg-taller" required>
+
+                            <option value="" disabled selected>
+                                Selecciona un taller
+                            </option>
+
+                            <option value="percusion">
+                                🥁 Percusión Murga
+                            </option>
+
+                            <option value="danza">
+                                💃 Danza Andina
+                            </option>
+
+                            <option value="vestuario">
+                                👗 Diseño de Vestuario
+                            </option>
+
+                            <option value="teatro">
+                                🎭 Teatro Callejero
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- MENSAJE -->
+                    <div class="form-group">
+
+                        <label for="reg-msg">
+                            ¿Por qué quieres unirte?
+
+                            <span class="optional-text">
+                                (Opcional)
+                            </span>
+                        </label>
+
                         <textarea id="reg-msg" rows="3" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+
                     </div>
+
+                    <!-- PASSWORDS -->
                     <div class="form-row-2">
+
+                        <!-- PASSWORD -->
                         <div class="form-group">
-                            <label for="reg-password">Contraseña</label>
-                            <input type="password" id="reg-password" placeholder="Mín. 8 car."
-                                autocomplete="new-password" required>
+
+                            <label for="reg-password">
+                                Contraseña
+                            </label>
+
+                            <div class="input-password-wrap">
+
+                                <input type="password" id="reg-password" placeholder="Mín. 8 caracteres"
+                                    autocomplete="new-password" required>
+
+                                <button type="button" class="toggle-pass" data-target="reg-password"
+                                    aria-label="Mostrar contraseña">
+
+                                    👁
+
+                                </button>
+
+                            </div>
+
                         </div>
+
+                        <!-- CONFIRM PASSWORD -->
                         <div class="form-group">
-                            <label for="reg-password2">Confirmar</label>
-                            <input type="password" id="reg-password2" placeholder="Repite" autocomplete="new-password"
-                                required>
+
+                            <label for="reg-password2">
+                                Confirmar
+                            </label>
+
+                            <div class="input-password-wrap">
+
+                                <input type="password" id="reg-password2" placeholder="Repite la contraseña"
+                                    autocomplete="new-password" required>
+
+                                <button type="button" class="toggle-pass" data-target="reg-password2"
+                                    aria-label="Mostrar contraseña">
+
+                                    👁
+
+                                </button>
+
+                            </div>
+
                         </div>
+
                     </div>
+
+                    <!-- ALERT -->
+                    <div id="registerAlert" class="form-alert" role="alert" aria-live="polite">
+                    </div>
+
+                    <!-- BOTÓN -->
                     <div class="form-btn-wrap">
-                        <button type="submit" class="portal-btn portal-btn-register">
+
+                        <button type="submit" id="registerSubmit" class="portal-btn portal-btn-register">
+
                             Unirme a la Escuela
+
                         </button>
+
                     </div>
+
                 </form>
 
+                <!-- FOOTER -->
                 <div class="auth-footer">
-                    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+
+                    <p>
+                        ¿Ya tienes cuenta?
+
+                        <a href="login.html">
+                            Inicia sesión aquí
+                        </a>
+                    </p>
+
                 </div>
+
             </div>
 
         </div>
+
     </main>
 
     <script src="../asset/js/main.js"></script>
     <script src="../asset/js/auth-pages.js"></script>
+
 </body>
 
 </html>

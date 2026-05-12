@@ -1,0 +1,14 @@
+.auth-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid var(--dorado);
+
+    background: transparent;
+
+    margin-bottom: .7rem;
+
+    animation: spin 14s linear infinite;
+}

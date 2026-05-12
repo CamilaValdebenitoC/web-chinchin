@@ -7,33 +7,83 @@
 (function () {
   'use strict';
 
-  // ── Utilidades ─────────────────────────────────────────────
+  // ── Utilidades generales ───────────────────────────────────
 
   function isValidEmail(v) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
   }
 
+  /**
+   * Marca un campo como inválido usando clases Bootstrap
+   * y muestra el mensaje de error debajo.
+   */
   function showFieldError(input, msg) {
-    input.classList.add('input-error');
-    let err = input.closest('.form-group').querySelector('.field-error');
+    input.classList.remove('is-valid');
+    input.classList.add('is-invalid', 'input-error');
+
+    let err = _getErrorEl(input);
+    err.textContent = msg;
+    err.classList.remove('d-none');
+  }
+
+  /**
+   * Marca un campo como válido y oculta su mensaje de error.
+   */
+  function showFieldSuccess(input) {
+    input.classList.remove('is-invalid', 'input-error');
+    input.classList.add('is-valid');
+
+    let err = _getErrorEl(input);
+    if (err) {
+      err.textContent = '';
+      err.classList.add('d-none');
+    }
+  }
+
+  /**
+   * Obtiene (o crea) el elemento de error asociado a un input.
+   */
+  function _getErrorEl(input) {
+    const group = input.closest('.form-group') || input.parentElement;
+    let err = group.querySelector('.field-error');
     if (!err) {
       err = document.createElement('span');
       err.className = 'field-error';
-      // Insertar después del input o del .input-password-wrap
       const wrap = input.closest('.input-password-wrap') || input;
       wrap.insertAdjacentElement('afterend', err);
     }
-    err.textContent = msg;
+    return err;
   }
 
+  /**
+   * Limpia todos los estados de error/éxito de un formulario.
+   */
   function clearFieldErrors(form) {
-    form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-    form.querySelectorAll('.field-error').forEach(el => el.remove());
+    form.querySelectorAll('.is-invalid, .is-valid, .input-error').forEach(el => {
+      el.classList.remove('is-invalid', 'is-valid', 'input-error');
+    });
+    form.querySelectorAll('.field-error').forEach(el => {
+      el.textContent = '';
+      el.classList.add('d-none');
+    });
   }
 
+  /**
+   * Muestra el alert principal del formulario.
+   * @param {HTMLElement} alertEl
+   * @param {string} msg
+   * @param {'error'|'success'} type
+   */
   function showAlert(alertEl, msg, type = 'error') {
     alertEl.textContent = msg;
-    alertEl.className = 'form-alert visible' + (type === 'success' ? ' success' : '');
+    const isSuccess = type === 'success';
+    alertEl.className = [
+      'form-alert',
+      'alert',
+      isSuccess ? 'alert-success' : 'alert-danger',
+      'rounded-4',
+      'visible',
+    ].join(' ');
   }
 
   function hideAlert(alertEl) {
@@ -42,12 +92,14 @@
   }
 
   function setLoading(btn, label) {
+    btn.disabled = true;
     btn.classList.add('loading');
     btn.dataset.originalText = btn.textContent;
     btn.textContent = label;
   }
 
   function clearLoading(btn) {
+    btn.disabled = false;
     btn.classList.remove('loading');
     btn.textContent = btn.dataset.originalText || btn.textContent;
   }
@@ -72,51 +124,71 @@
   const loginForm = document.getElementById('loginForm');
 
   if (loginForm) {
-    const loginAlert = document.getElementById('loginAlert');
+    const loginAlert  = document.getElementById('loginAlert');
     const loginSubmit = document.getElementById('loginSubmit');
+    const emailInput  = document.getElementById('login-email');
+    const passInput   = document.getElementById('login-pass');
 
-    // Limpiar error de campo al escribir
-    loginForm.querySelectorAll('input').forEach(input => {
-      input.addEventListener('input', function () {
-        this.classList.remove('input-error');
-        const err = this.closest('.form-group').querySelector('.field-error');
-        if (err) err.remove();
-        hideAlert(loginAlert);
-      });
+    // ── Validadores individuales ──────────────────────────
+
+    function validateLoginEmail() {
+      if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+        showFieldError(emailInput, 'Ingresa un correo electrónico válido.');
+        return false;
+      }
+      showFieldSuccess(emailInput);
+      return true;
+    }
+
+    function validateLoginPass() {
+      if (passInput.value.length < 6) {
+        showFieldError(passInput, 'La contraseña debe tener al menos 6 caracteres.');
+        return false;
+      }
+      showFieldSuccess(passInput);
+      return true;
+    }
+
+    // ── Validación en tiempo real ─────────────────────────
+
+    emailInput.addEventListener('input', function () {
+      validateLoginEmail();
+      hideAlert(loginAlert);
     });
+
+    passInput.addEventListener('input', function () {
+      validateLoginPass();
+      hideAlert(loginAlert);
+    });
+
+    // ── Submit ────────────────────────────────────────────
 
     loginForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       clearFieldErrors(this);
       hideAlert(loginAlert);
 
-      const email = document.getElementById('login-email');
-      const pass  = document.getElementById('login-pass');
-      let valid = true;
+      const isEmailValid = validateLoginEmail();
+      const isPassValid  = validateLoginPass();
 
-      if (!email.value.trim() || !isValidEmail(email.value)) {
-        showFieldError(email, 'Ingresa un correo electrónico válido.');
-        valid = false;
+      if (!isEmailValid || !isPassValid) {
+        showAlert(loginAlert, 'Revisa los campos marcados antes de continuar.');
+        return;
       }
-      if (pass.value.length < 6) {
-        showFieldError(pass, 'La contraseña debe tener al menos 6 caracteres.');
-        valid = false;
-      }
-      if (!valid) return;
 
       setLoading(loginSubmit, 'Entrando…');
 
       try {
-        // ── Conecta aquí tu API de autenticación ──────────────
+        // ── Conecta aquí tu API de autenticación ──────────
         // const res = await fetch('/api/login', {
         //   method: 'POST',
         //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify({ email: email.value.trim(), password: pass.value })
+        //   body: JSON.stringify({ email: emailInput.value.trim(), password: passInput.value })
         // });
         // const data = await res.json();
         // if (!res.ok) throw new Error(data.message || 'Credenciales incorrectas.');
         // window.location.href = 'dashboard.html';
-        // ─────────────────────────────────────────────────────
+        // ─────────────────────────────────────────────────
 
         // Simulación (eliminar al integrar tu API):
         await new Promise(r => setTimeout(r, 1200));
@@ -140,12 +212,69 @@
   if (registerForm) {
     const registerAlert  = document.getElementById('registerAlert');
     const registerSubmit = document.getElementById('registerSubmit');
+    const nameInput      = document.getElementById('reg-name');
+    const emailInput     = document.getElementById('reg-email');
+    const tallerInput    = document.getElementById('reg-taller');
     const passInput      = document.getElementById('reg-password');
+    const pass2Input     = document.getElementById('reg-password2');
     const strengthEl     = document.getElementById('passwordStrength');
     const strengthFill   = document.getElementById('strengthFill');
     const strengthLabel  = document.getElementById('strengthLabel');
 
-    // Indicador de fortaleza de contraseña
+    // ── Validadores individuales ──────────────────────────
+
+    function validateName() {
+      const val = nameInput.value.trim();
+      if (!val) {
+        showFieldError(nameInput, 'El nombre es obligatorio.');
+        return false;
+      }
+      if (val.length < 3) {
+        showFieldError(nameInput, 'El nombre debe tener al menos 3 caracteres.');
+        return false;
+      }
+      showFieldSuccess(nameInput);
+      return true;
+    }
+
+    function validateEmail() {
+      if (!isValidEmail(emailInput.value)) {
+        showFieldError(emailInput, 'Ingresa un correo electrónico válido.');
+        return false;
+      }
+      showFieldSuccess(emailInput);
+      return true;
+    }
+
+    function validateTaller() {
+      if (!tallerInput.value) {
+        showFieldError(tallerInput, 'Selecciona un taller de interés.');
+        return false;
+      }
+      showFieldSuccess(tallerInput);
+      return true;
+    }
+
+    function validatePassword() {
+      if (passInput.value.length < 8) {
+        showFieldError(passInput, 'La contraseña debe tener al menos 8 caracteres.');
+        return false;
+      }
+      showFieldSuccess(passInput);
+      return true;
+    }
+
+    function validatePassword2() {
+      if (pass2Input.value !== passInput.value) {
+        showFieldError(pass2Input, 'Las contraseñas no coinciden.');
+        return false;
+      }
+      showFieldSuccess(pass2Input);
+      return true;
+    }
+
+    // ── Indicador de fortaleza de contraseña ──────────────
+
     if (passInput && strengthEl) {
       passInput.addEventListener('input', function () {
         const v = this.value;
@@ -156,10 +285,10 @@
         strengthEl.classList.add('visible');
 
         let score = 0;
-        if (v.length >= 8)              score++;
-        if (/[A-Z]/.test(v))            score++;
-        if (/[0-9]/.test(v))            score++;
-        if (/[^A-Za-z0-9]/.test(v))     score++;
+        if (v.length >= 8)           score++;
+        if (/[A-Z]/.test(v))         score++;
+        if (/[0-9]/.test(v))         score++;
+        if (/[^A-Za-z0-9]/.test(v))  score++;
 
         const levels = [
           { cls: '',       label: '' },
@@ -174,74 +303,64 @@
       });
     }
 
-    // Limpiar errores al escribir
-    registerForm.querySelectorAll('input, select, textarea').forEach(el => {
-      el.addEventListener('input', function () {
-        this.classList.remove('input-error');
-        const err = this.closest('.form-group').querySelector('.field-error');
-        if (err) err.remove();
-        hideAlert(registerAlert);
-      });
-    });
+    // ── Validación en tiempo real ─────────────────────────
+
+    nameInput.addEventListener('input',   () => { validateName();      hideAlert(registerAlert); });
+    emailInput.addEventListener('input',  () => { validateEmail();     hideAlert(registerAlert); });
+    tallerInput.addEventListener('input', () => { validateTaller();    hideAlert(registerAlert); });
+    passInput.addEventListener('input',   () => { validatePassword();  hideAlert(registerAlert); });
+    pass2Input.addEventListener('input',  () => { validatePassword2(); hideAlert(registerAlert); });
+
+    // ── Submit ────────────────────────────────────────────
 
     registerForm.addEventListener('submit', async function (e) {
       e.preventDefault();
       clearFieldErrors(this);
       hideAlert(registerAlert);
 
-      const name   = document.getElementById('reg-name');
-      const email  = document.getElementById('reg-email');
-      const taller = document.getElementById('reg-taller');
-      const pass   = document.getElementById('reg-password');
-      const pass2  = document.getElementById('reg-password2');
-      let valid = true;
+      const results = [
+        validateName(),
+        validateEmail(),
+        validateTaller(),
+        validatePassword(),
+        validatePassword2(),
+      ];
 
-      if (!name.value.trim()) {
-        showFieldError(name, 'Ingresa tu nombre completo.');
-        valid = false;
+      if (results.includes(false)) {
+        showAlert(registerAlert, 'Revisa los campos marcados antes de continuar.');
+        return;
       }
-      if (!isValidEmail(email.value)) {
-        showFieldError(email, 'Ingresa un correo electrónico válido.');
-        valid = false;
-      }
-      if (!taller.value) {
-        showFieldError(taller, 'Selecciona un taller de interés.');
-        valid = false;
-      }
-      if (pass.value.length < 8) {
-        showFieldError(pass, 'La contraseña debe tener al menos 8 caracteres.');
-        valid = false;
-      }
-      if (pass2.value !== pass.value) {
-        showFieldError(pass2, 'Las contraseñas no coinciden.');
-        valid = false;
-      }
-      if (!valid) return;
 
       setLoading(registerSubmit, 'Creando cuenta…');
 
       try {
-        // ── Conecta aquí tu API de registro ───────────────────
+        // ── Conecta aquí tu API de registro ───────────────
         // const res = await fetch('/api/register', {
         //   method: 'POST',
         //   headers: { 'Content-Type': 'application/json' },
         //   body: JSON.stringify({
-        //     name: name.value.trim(),
-        //     email: email.value.trim(),
-        //     taller: taller.value,
+        //     name: nameInput.value.trim(),
+        //     email: emailInput.value.trim(),
+        //     taller: tallerInput.value,
         //     message: document.getElementById('reg-msg')?.value || '',
-        //     password: pass.value
+        //     password: passInput.value
         //   })
         // });
         // const data = await res.json();
         // if (!res.ok) throw new Error(data.message || 'No se pudo crear la cuenta.');
         // window.location.href = 'login.html';
-        // ─────────────────────────────────────────────────────
+        // ─────────────────────────────────────────────────
 
         // Simulación (eliminar al integrar tu API):
         await new Promise(r => setTimeout(r, 1400));
         showAlert(registerAlert, '¡Cuenta creada! Redirigiendo al inicio de sesión…', 'success');
-        setTimeout(() => { window.location.href = 'login.html'; }, 1800);
+
+        setTimeout(() => {
+          registerForm.reset();
+          registerForm.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+          if (strengthEl) strengthEl.classList.remove('visible');
+          window.location.href = 'login.html';
+        }, 1800);
 
       } catch (err) {
         showAlert(registerAlert, err.message || 'Ocurrió un error. Intenta de nuevo.');
