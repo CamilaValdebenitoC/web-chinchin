@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Educativo – Chinchintirapie</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../asset/css/styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-img">
+        <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+      </div>
+      <div class="logo-text">
+        <span>Chinchintirapie</span>
+        <span>Escuela Carnavalera</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Inicio</a></li>
+      <li class="has-dropdown">
+        <button>Escuela <span class="caret">▾</span></button>
+        <div class="dropdown">
+          <a href="index.html#historia">Historia</a>
+          <a href="../components/organizacion.html">Organización</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <button>Noticias <span class="caret">▾</span></button>
+        <div class="dropdown">
+          <a href="index.html#hitos">Hitos Recientes</a>
+          <a href="index.html#cronicas">Crónicas</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <button>Archivo <span class="caret">▾</span></button>
+        <div class="dropdown">
+          <a href="../components/repositorio.html">📂 Repositorio</a>
+          <a href="../components/cedoc.html">📚 CEDOC</a>
+          <a href="../components/material-educativo.html">🎓 Material Educativo</a>
+        </div>
+      </li>
+      <li><a href="../components/tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="../components/login.html" class="nav-login-btn">Ingresar</a></li>
+    </ul>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <span class="ticker-inner">
+      🎓 Material Educativo de la Escuela Carnavalera &nbsp;&nbsp;📄 PDFs, videos y guías descargables &nbsp;&nbsp;🥁
+      Organizado por cuerpo · equipo · nivel &nbsp;&nbsp;💃 Percusión · Danza · Vestuario · Teatro &nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-badge">🎓 Recursos Pedagógicos</div>
+    <h1>Material <em>Educativo</em></h1>
+    <p>Repositorio pedagógico de la escuela: guías, videos, partituras y recursos organizados por cuerpo, equipo y nivel
+      para el aprendizaje carnavalero.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="strip-stat"><span class="s-num">84</span><span class="s-label">Recursos</span></div>
+    <div class="strip-stat"><span class="s-num">4</span><span class="s-label">Cuerpos</span></div>
+    <div class="strip-stat"><span class="s-num">3</span><span class="s-label">Niveles</span></div>
+    <div class="strip-stat"><span class="s-num">6</span><span class="s-label">Equipos</span></div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filter-tabs" id="filterTabs">
+    <button class="filter-tab active" data-filter="all">Todos</button>
+    <button class="filter-tab" data-filter="percusion">🥁 Percusión</button>
+    <button class="filter-tab" data-filter="danza">💃 Danza</button>
+    <button class="filter-tab" data-filter="vestuario">👗 Vestuario</button>
+    <button class="filter-tab" data-filter="teatro">🎭 Teatro</button>
+    <button class="filter-tab" data-filter="nivel-1">🟢 Iniciación</button>
+    <button class="filter-tab" data-filter="nivel-2">🟡 Intermedio</button>
+    <button class="filter-tab" data-filter="nivel-3">🔴 Avanzado</button>
+  </div>
+
+  <!-- CONTENIDO -->
+  <main class="edu-layout">
+
+    <!-- POR CUERPOS -->
+    <div id="contentArea">
+
+      <!-- PERCUSIÓN MURGA -->
+      <h2 class="edu-section-title reveal">🥁 Cuerpo de Percusión Murga</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal" data-tags="percusion nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf">📄</div>
+            <div>
+              <h3>Introducción al Bombo</h3>
+              <p>Iniciación · Percusión</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Guía básica de técnica, postura y primeros ritmos para el bombo murguero. Incluye ejercicios progresivos
+              y diagrama de parche.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">PDF · 8 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">👁 Vista previa</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="percusion nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-video">🎬</div>
+            <div>
+              <h3>Ritmos Básicos de Murga</h3>
+              <p>Iniciación · Video tutorial</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Serie de 4 videos cortos con los ritmos fundamentales de la murga: cuerpo, dobla, marcha y pasodoble.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">4 videos · 6 min c/u</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">▶ Ver videos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="percusion nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf">📄</div>
+            <div>
+              <h3>Redoblante y Platillos: Técnica</h3>
+              <p>Intermedio · Percusión</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Manual completo para el trabajo con redoblante y platillos en el contexto de la murga callejera. Incluye
+              partituras adaptadas.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">PDF · 16 págs.</span>
+              <span class="edu-badge">Partituras</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">🎵 Audio guía</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="percusion nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-audio">🎵</div>
+            <div>
+              <h3>Base Rítmica Colectiva</h3>
+              <p>Intermedio · Audio + PDF</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Pistas de audio para ensayo individual con metrónomo, más partitura de ensamble para el cuerpo completo
+              de percusión.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">8 pistas MP3</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="percusion nivel-3">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-doc">📑</div>
+            <div>
+              <h3>Dirección de Murga en Calle</h3>
+              <p>Avanzado · Guía completa</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Herramientas de dirección para liderar la murga en contexto de desfile: señas, dinámicas, comunicación no
+              verbal y gestión grupal.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-3">Avanzado</span>
+              <span class="edu-badge">PDF · 24 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">▶ Video</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DANZA ANDINA -->
+      <h2 class="edu-section-title reveal">💃 Cuerpo de Danza Andina</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal" data-tags="danza nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-video" style="background:linear-gradient(135deg,var(--rojo),#8e44ad)">💃</div>
+            <div>
+              <h3>Pasos Básicos: Tinku y Morenada</h3>
+              <p>Iniciación · Danza</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Introducción a los pasos fundamentales de la danza andina: postura, peso, desplazamiento y primeras
+              secuencias coreográficas.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">6 videos · 8 min c/u</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">▶ Ver videos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="danza nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf">📄</div>
+            <div>
+              <h3>Calentamiento y Preparación Corporal</h3>
+              <p>Iniciación · Rutina física</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Rutina de calentamiento específica para la danza carnavalera: movilidad articular, elongación y
+              activación muscular ilustrada.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">PDF · 12 págs.</span>
+              <span class="edu-badge">Ilustrado</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="danza nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-video">🎬</div>
+            <div>
+              <h3>Formaciones de Desfile</h3>
+              <p>Intermedio · Coreografía</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Video tutorial sobre formaciones clásicas del cuerpo de baile en el desfile: columnas, abanicos,
+              espirales y cruces.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">3 videos · 15 min c/u</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">▶ Ver videos</a>
+              <a href="#" class="edu-btn edu-btn-secondary">⬇ Guía PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="danza nivel-3">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-doc">📑</div>
+            <div>
+              <h3>Composición Coreográfica Avanzada</h3>
+              <p>Avanzado · Creación</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Metodología para crear y enseñar coreografías propias: principios de composición, trabajo con música en
+              vivo y adaptación al espacio callejero.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-3">Avanzado</span>
+              <span class="edu-badge">PDF · 30 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VESTUARIO -->
+      <h2 class="edu-section-title reveal">👗 Cuerpo de Vestuario</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal" data-tags="vestuario nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf"
+              style="background:linear-gradient(135deg,var(--naranja),var(--amarillo))">👗</div>
+            <div>
+              <h3>Diseño de Traje Carnavalero Básico</h3>
+              <p>Iniciación · Diseño</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Guía paso a paso para crear tu primer traje carnavalero con materiales accesibles y reciclados. Incluye
+              patrones básicos y técnicas de construcción.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">PDF · 20 págs.</span>
+              <span class="edu-badge">Patrones incluidos</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">▶ Tutorial</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="vestuario nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-video">🎬</div>
+            <div>
+              <h3>Máscaras y Tocados Artesanales</h3>
+              <p>Intermedio · Construcción</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Serie de videos sobre fabricación de máscaras en papel maché, yeso y cartón. Técnicas de decoración,
+              pintura y acabados festivos.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">5 videos · 20 min c/u</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">▶ Ver videos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="vestuario nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf">📄</div>
+            <div>
+              <h3>Gestión de Vestuario en Escuela</h3>
+              <p>Intermedio · Organización</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Manual para organizar el taller de vestuario: inventario, cuidado de materiales, trabajo colaborativo y
+              producción en serie para el desfile.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">PDF · 14 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="vestuario nivel-3">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-doc">📑</div>
+            <div>
+              <h3>Diseño Conceptual de Colección</h3>
+              <p>Avanzado · Dirección artística</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Metodología para desarrollar la identidad visual de un carnaval: concepto, paleta cromática, coherencia
+              entre cuerpos y adaptación al presupuesto.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-3">Avanzado</span>
+              <span class="edu-badge">PDF · 28 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TEATRO CALLEJERO -->
+      <h2 class="edu-section-title reveal">🎭 Cuerpo de Teatro Callejero</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card reveal" data-tags="teatro nivel-1">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-video" style="background:linear-gradient(135deg,#2c3e50,#8e44ad)">🎭</div>
+            <div>
+              <h3>Introducción al Espacio Escénico Callejero</h3>
+              <p>Iniciación · Teatro</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Conceptos básicos del teatro de calle: el cuerpo en el espacio público, la relación con el público
+              transeúnte y el trabajo sin micrófono.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-1">Iniciación</span>
+              <span class="edu-badge">PDF · 10 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">▶ Video</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="teatro nivel-2">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-pdf">📄</div>
+            <div>
+              <h3>Zancos: Seguridad y Técnica Básica</h3>
+              <p>Intermedio · Zancos</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Protocolo de seguridad, primeros pasos, equilibrio y desplazamiento básico en zancos de madera.
+              Obligatorio para el trabajo con zancos.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-2">Intermedio</span>
+              <span class="edu-badge">PDF · 18 págs.</span>
+              <span class="edu-badge">Seguridad</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" data-tags="teatro nivel-3">
+          <div class="edu-card-header">
+            <div class="edu-icon edu-icon-doc">📑</div>
+            <div>
+              <h3>Creación de Personaje Carnavalero</h3>
+              <p>Avanzado · Dramaturgia</p>
+            </div>
+          </div>
+          <div class="edu-card-body">
+            <p>Proceso completo para crear un personaje de carnaval: máscara social, psicología del personaje, relación
+              con el cortejo y trabajo de improvisación.</p>
+            <div class="edu-badge-row">
+              <span class="edu-badge nivel-3">Avanzado</span>
+              <span class="edu-badge">PDF · 32 págs.</span>
+            </div>
+            <div class="edu-actions">
+              <a href="#" class="edu-btn edu-btn-primary">⬇ Descargar</a>
+              <a href="#" class="edu-btn edu-btn-secondary">▶ Video</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIN RESULTADOS -->
+      <div id="noResults" style="display:none;text-align:center;padding:4rem 2rem">
+        <p style="font-family:'Bangers',cursive;font-size:2rem;color:var(--rojo)">😶 Sin resultados</p>
+        <p style="color:#7a5c40;margin-top:.5rem">Intenta con otro filtro o nivel.</p>
+      </div>
+
+    </div><!-- fin contentArea -->
+
+    <!-- CÓMO USAR -->
+    <div
+      style="margin-top:4rem;background:#fff;border-radius:18px;padding:2.5rem;box-shadow:4px 4px 0 var(--dorado),0 8px 24px rgba(0,0,0,.08)"
+      class="reveal">
+      <h2
+        style="font-family:'Bangers',cursive;font-size:2rem;color:var(--oscuro);letter-spacing:2px;margin-bottom:1.5rem">
+        🗺 Guía de Niveles</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem">
+        <div style="background:var(--crema);border:2px solid var(--verde);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;margin-bottom:.4rem">🟢</div>
+          <strong style="font-family:'Boogaloo',cursive;font-size:1.1rem;color:var(--oscuro)">Iniciación</strong>
+          <p style="font-size:.85rem;color:#6a4c35;margin-top:.3rem;line-height:1.5">Sin experiencia previa. Conceptos
+            básicos, primeros pasos y herramientas fundamentales de cada disciplina.</p>
+        </div>
+        <div style="background:var(--crema);border:2px solid var(--amarillo);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;margin-bottom:.4rem">🟡</div>
+          <strong style="font-family:'Boogaloo',cursive;font-size:1.1rem;color:var(--oscuro)">Intermedio</strong>
+          <p style="font-size:.85rem;color:#6a4c35;margin-top:.3rem;line-height:1.5">Con práctica mínima de 6 meses.
+            Técnicas más complejas, trabajo colectivo y aplicación en desfile.</p>
+        </div>
+        <div style="background:var(--crema);border:2px solid var(--rojo);border-radius:12px;padding:1.2rem">
+          <div style="font-size:1.5rem;margin-bottom:.4rem">🔴</div>
+          <strong style="font-family:'Boogaloo',cursive;font-size:1.1rem;color:var(--oscuro)">Avanzado</strong>
+          <p style="font-size:.85rem;color:#6a4c35;margin-top:.3rem;line-height:1.5">Experiencia de 2+ años. Enfoque en
+            liderazgo, creación, dirección y transmisión a nuevos integrantes.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Chinchintirapie</span>
+        <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la
+          calle junto a la comunidad.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#">📘</a>
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">▶️</a>
+          <a class="social-btn" href="#">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Escuela</h4>
+        <ul>
+          <li><a href="index.html#historia">Historia</a></li>
+          <li><a href="index.html#organizacion">Organización</a></li>
+          <li><a href="index.html#organizacion">Nuestros talleres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Archivo</h4>
+        <ul>
+          <li><a href="repositorio.html">Repositorio</a></li>
+          <li><a href="cedoc.html">CEDOC</a></li>
+          <li><a href="material-educativo.html">Material Educativo</a></li>
+          <li><a href="index.html#cronicas">Crónicas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Donaciones</a></li>
+          <li><a href="#">Únete a la murga</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+    </div>
+  </footer>
+
+  <script src="../asset/js/main.js"></script>
+  <script src="../asset/js/material-educativo.js"></script>
+</body>
+
+</html>
