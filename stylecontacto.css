@@ -1,80 +1,172 @@
+/* ===== ESTILO CARNAVALERO 🎭 ===== */
 
-:root {
-    --org-bg: #fffaf5;
-    --org-surface: #ffffff;
-    --org-surface-soft: #fff4ea;
-    --org-text: #3f2d22;
-    --org-text-soft: #6f6259;
-    --org-border: rgba(63, 45, 34, 0.1);
-    --org-shadow-sm: 0 8px 20px rgba(63, 45, 34, 0.08);
-    --org-shadow-md: 0 18px 38px rgba(63, 45, 34, 0.12);
-    --org-radius-sm: 14px;
-    --org-radius-md: 20px;
-    --org-radius-lg: 24px;
-    --org-transition: 220ms ease;
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ff0080,
+        #ff5e00,
+        #ffd000,
+        #00d9ff,
+        #7b00ff
+    );
+    background-size: 400% 400%;
+    animation: fondoFiesta 12s ease infinite;
+    color:white;
+    text-align:center;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-
-    border-color: #ff0077;
-
-    box-shadow: 0 0 0 4px rgba(255,0,119,0.15);
+/* Animación del fondo */
+@keyframes fondoFiesta{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
-textarea {
-    resize: vertical;
+/* Título principal */
+h1{
+    font-size:70px;
+    margin-top:40px;
+    color:#fff700;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #00ffff,
+        0 0 30px #ff6600;
+    letter-spacing:3px;
 }
 
-.btn-contacto {
-    width: 100%;
-
-    border: none;
-    border-radius: 999px;
-
-    padding: 18px;
-
-    background:
-        linear-gradient(135deg, #ff6f00, #ff0077);
-
-    color: white;
-
-    font-size: 1rem;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+/* Subtítulos */
+h2{
+    color:#ffffff;
+    text-shadow:2px 2px 10px black;
+    font-size:45px;
 }
 
-.btn-contacto:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 10px 20px rgba(255,0,119,0.25);
+/* Texto general */
+p,label{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+    text-shadow:2px 2px 6px black;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* FORMULARIO */
+form{
+    width:70%;
+    margin:auto;
+    padding:30px;
+    border-radius:30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 20px #fff,
+        0 0 40px #ff00ff,
+        0 0 60px #00ffff;
+}
 
-@media(max-width: 900px) {
+/* Inputs */
+input, textarea{
+    width:60%;
+    padding:15px;
+    margin:10px;
+    border:none;
+    border-radius:15px;
+    font-size:22px;
+    background:white;
+    box-shadow:0 0 10px #ff00ff;
+    transition:0.3s;
+}
 
-    .contact-card {
-        grid-template-columns: 1fr;
+/* Efecto focus */
+input:focus,
+textarea:focus{
+    outline:none;
+    transform:scale(1.03);
+    box-shadow:
+        0 0 15px #fff700,
+        0 0 25px #ff00ff;
+}
+
+/* Botón carnavalero */
+button{
+    margin-top:25px;
+    width:80%;
+    padding:22px;
+    border:none;
+    border-radius:60px;
+    font-size:34px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+
+    background: linear-gradient(
+        90deg,
+        #ff5e00,
+        #ff0080,
+        #7b00ff,
+        #00d9ff
+    );
+
+    background-size:300% 300%;
+    animation: brilloBoton 5s infinite;
+
+    box-shadow:
+        0 0 20px #ff00ff,
+        0 0 40px #ff6600;
+    
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 25px white,
+        0 0 50px yellow,
+        0 0 70px #ff00ff;
+}
+
+/* Animación botón */
+@keyframes brilloBoton{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Link volver */
+a{
+    color:#fff700;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0 0 10px black;
+}
+
+a:hover{
+    color:white;
+    text-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #00ffff;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    h1{
+        font-size:45px;
     }
 
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
+    form{
+        width:90%;
     }
 
-    .hero-content h2 {
-        font-size: 2.2rem;
+    input, textarea{
+        width:85%;
     }
 
-    .contact-info,
-    .contact-form-box {
-        padding: 35px;
+    button{
+        width:90%;
+        font-size:25px;
     }
 }
