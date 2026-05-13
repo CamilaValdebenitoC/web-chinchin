@@ -1,230 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinchintirapie – Escuela Carnavalera</title>
-    <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../asset/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../asset/css/cronicas.css">
 </head>
 
 <body>
-        <!-- NAVBAR -->
-    <nav class="navbar">
-        <a href="../index.html" class="logo-wrap">
-            <div class="logo-img">
-                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
-            </div>
-            <div class="logo-text">
-                <span>Chinchintirapie</span>
-                <span>Escuela Carnavalera</span>
-            </div>
-        </a>
-        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="../index.html">Inicio</a></li>
-            <li class="has-dropdown">
-                <button>Escuela <span class="caret">▾</span></button>
-                <div class="dropdown">
-                    <a href="historia.html">Historia</a>
-                    <a href="organizacion.html">Organización</a>
-                </div>
-            </li>
-            <li class="has-dropdown">
-                <button>Noticias <span class="caret">▾</span></button>
-                <div class="dropdown">
-                    <a href="noticias.html">Hitos Recientes</a>
-                    <a href="cronicas.html">Crónicas</a>
-                </div>
-            </li>
-            <li class="has-dropdown">
-                <button>Archivo <span class="caret">▾</span></button>
-                <div class="dropdown">
-                    <a href="repositorio.html">Repositorio</a>
-                    <a href="cedoc.html">CEDOC</a>
-                    <a href="material-educativo.html">Material Educativo</a>
-                </div>
-            </li>
-            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- TITULO -->
-    <div class="news-header-wrapper">
-        <div class="news-header">
-            <h2>Hitos Recientes</h2>
-            <p>Actividades, encuentros y memoria viva de la Escuela Carnavalera Chinchintirapie.</p>
+<nav class="navbar">
+    <a href="logo%20chinchitirapie%20.png" class="logo-wrap">
+        <div class="logo-img">
+            <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie"></div>
+        <div class="logo-text">
+            <span>Chinchintirapie</span>
+            <span>Escuela Carnavalera</span>
         </div>
+    </a>
 
-        <div class="news-filter">
-            <select>
-                <option>Todas</option>
-                <option>Carnaval</option>
-                <option>Audiovisual</option>
-                <option>Talleres</option>
-                <option>Pedagogía</option>
-                <option>Eventos</option>
-            </select>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li class="has-dropdown" id="dd-escuela">
+            <button>Escuela <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#historia">Historia</a>
+                <a href="#organizacion">Organización</a>
+            </div>
+        </li>
+
+        <li class="has-dropdown" id="dd-noticias">
+            <button>Noticias <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#hitos">Hitos Recientes</a>
+                <a href="#cronicas">Crónicas</a>
+            </div>
+        </li>
+
+        <li class="has-dropdown" id="dd-archivo">
+            <button>Archivo <span class="caret">▾</span></button>
+            <div class="dropdown">
+                <a href="#repositorio">Repositorio</a>
+                <a href="#cedoc">CEDOC</a>
+            </div>
+        </li>
+        <li><a href="#tienda" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<section class="cronicas-section">
+    <!-- HEADER -->
+    <div class="cronicas-header">
+        <h2>CRÓNICAS</h2>
+        <p>Relatos, memorias y registros del carnaval popular</p>
+    </div>
+    <!-- LAYOUT EDITORIAL -->
+    <div class="cronicas-editorial">
+        <!-- IZQUIERDA -->
+        <article class="cronica-side">
+            <img src="../asset/img/img4.png" alt="Carnaval">
+            <span>MEMORIA POPULAR</span>
+            <h3>Todo comienza en la calle</h3>
+            <p>Relatos sobre comparsas, barrios y encuentros
+                que mantienen viva la memoria carnavalera.</p>
+            <span class="cronica-author">Por Matías González</span>
+            <a href="#" class="cronica-btn">
+                Leer más
+            </a>
+        </article>
+        <!-- CENTRO -->
+        <article class="cronica-main">
+            <img src="../asset/img/img7.png" alt="Carnaval">
+            <span>CULTURA POPULAR</span>
+            <h1>“El carnaval también es una forma de recordar.”</h1>
+        </article>
+        <!-- DERECHA -->
+        <aside class="cronica-editor-picks">
+            <h4>SELECCIÓN EDITORIAL</h4>
+            <div class="pick">
+                <span>AUDIOVISUAL</span>
+                <h3>El sonido de la murga en los barrios</h3>
+                <p>Testimonios y registros de músicos populares
+                    en encuentros comunitarios.
+                </p><span class="cronica-author">Por Matías González</span>
+                <a href="#" class="cronica-btn">
+                    Leer más
+                </a>
+            </div>
+            <div class="pick">
+                <span>COMUNIDAD</span>
+                <h3>Historias detrás de las máscaras</h3>
+                <p>
+                    Crónicas íntimas sobre identidad,
+                    memoria y carnaval.
+                </p>
+                <span class="cronica-author">Por Matías González</span>
+                <a href="#" class="cronica-btn">
+                    Leer más
+                </a>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="cronica-final-banner">
+    <img src="../asset/img/img2.png" alt="Carnaval">
+    <div class="cronica-final-overlay">
+        <span>MEMORIA POPULAR</span>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <span class="brand-name">Chinchintirapie</span>
+            <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la calle junto a la comunidad.</p>
+            <div class="social-row">
+                <a class="social-btn" href="#">📘</a>
+                <a class="social-btn" href="#">📸</a>
+                <a class="social-btn" href="#">▶️</a>
+                <a class="social-btn" href="#">🐦</a>
+            </div>
+        </div>
+        <div class="footer-col" id="repositorio">
+            <h4>Escuela</h4>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#organizacion">Organización</a></li>
+                <li><a href="#organizacion">Nuestros talleres</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="cedoc">
+            <h4>Archivo</h4>
+            <ul>
+                <li><a href="#repositorio">Repositorio</a></li>
+                <li><a href="#cedoc">CEDOC</a></li>
+                <li><a href="#cronicas">Crónicas</a></li>
+                <li><a href="#hitos">Hitos recientes</a></li>
+            </ul>
+        </div>
+        <div class="footer-col" id="tienda">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Únete a la murga</a></li>
+            </ul>
         </div>
     </div>
-
-
-
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../img/img1.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <h1>Homenaje Victor Jara</h1>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../img/img2.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <h1>Conmemoración Hermanos Vergara Toledo</h1>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="../img/img3.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <h1>Aniversario Violeta Parra</h1>
-                </div>
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <div class="footer-bottom">
+        <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
     </div>
-
-    <section class="news-section">
-
-
-        <!-- GRID -->
-
-        <div class="news-grid">
-
-            <!-- NOTICIA PRINCIPAL -->
-
-            <article class="news-card featured">
-                <img src="../img/img1.png" alt="Carnaval">
-                <div class="news-overlay">
-                    <span class="news-category">DESTACADO</span>
-                    <h3>Homenaje Popular en las Calles</h3>
-                    <p>Registro audiovisual de la intervención artística realizada por la comunidad carnavalera.</p>
-                    <button>Ver noticia</button>
-                </div>
-            </article>
-
-            <!-- CARD -->
-            <article class="news-card">
-                <img src="../img/img6.png" alt="Carnaval">
-                <div class="news-content">
-                    <span class="news-category">CARNAVAL</span>
-                    <h3>Conmemoración Hermanos Vergara Toledo</h3>
-                    <p>Jornada cultural comunitaria con música y danza popular.</p>
-                    <button>Ver noticia</button>
-                </div>
-            </article>
-
-            <!-- CARD -->
-            <article class="news-card">
-                <img src="../img/img3.png" alt="Talleres">
-                <div class="news-content">
-                    <span class="news-category">TALLERES</span>
-                    <h3>Nuevos talleres abiertos a la comunidad</h3>
-                    <p>Espacios de formación artística para niñas, niños y adultos.</p>
-                    <button>Ver Noticia</button>
-                </div>
-            </article>
-
-            <!-- CARD VIDEO -->
-            <article class="news-card video-card">
-                <video autoplay muted loop playsinline>
-                    <source src="../Video%20Project.mp4" type="video/mp4">
-                </video>
-                <div class="news-overlay">
-                    <span class="news-category">AUDIOVISUAL</span>
-                    <h3>Ensayo nocturno de comparsa</h3>
-                    <button>Ver Noticia</button>
-                </div>
-            </article>
-
-            <!-- CARD -->
-            <article class="news-card">
-                <img src="../img/img4.png" alt="k">
-                <div class="news-content">
-                    <span class="news-category">ARCHIVO</span>
-                    <h3>Recuperación de registros históricos</h3>
-                    <p>Material audiovisual comunitario incorporado al repositorio.</p>
-                    <button>Ver Noticia</button>
-                </div>
-            </article>
-        </div>
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer id="contacto">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <span class="brand-name">Chinchintirapie</span>
-                <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la
-                    fiesta en la calle junto a la comunidad.</p>
-                <div class="social-row">
-                    <a class="social-btn" href="#">📘</a>
-                    <a class="social-btn" href="#">📸</a>
-                    <a class="social-btn" href="#">▶️</a>
-                    <a class="social-btn" href="#">🐦</a>
-                </div>
-            </div>
-            <div class="footer-col" id="repositorio">
-                <h4>Escuela</h4>
-                <ul>
-                    <li><a href="#historia">Historia</a></li>
-                    <li><a href="#organizacion">Organización</a></li>
-                    <li><a href="#organizacion">Nuestros talleres</a></li>
-                </ul>
-            </div>
-            <div class="footer-col" id="cedoc">
-                <h4>Archivo</h4>
-                <ul>
-                    <li><a href="#repositorio">Repositorio</a></li>
-                    <li><a href="#cedoc">CEDOC</a></li>
-                    <li><a href="#cronicas">Crónicas</a></li>
-                    <li><a href="#hitos">Hitos recientes</a></li>
-                </ul>
-            </div>
-            <div class="footer-col" id="tienda">
-                <h4>Contacto</h4>
-                <ul>
-                    <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
-                    <li><a href="#">Tienda</a></li>
-                    <li><a href="#">Donaciones</a></li>
-                    <li><a href="#">Únete a la murga</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../asset/js/main.js"></script>
+</footer>
 </body>
 </html>
