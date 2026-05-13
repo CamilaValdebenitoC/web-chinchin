@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
+  <title>CEDOC – Chinchintirapie</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../asset/css/styles.css">
+</head>
+
+<body>
+
+      <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+            </div>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
+            </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="has-dropdown">
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
+                </div>
+            </li>
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
+        </ul>
+    </nav>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <span class="ticker-inner">
+      📚 Centro de Documentación e Investigación &nbsp;&nbsp;✍️ Ensayos sobre banda, baile y figura &nbsp;&nbsp;🔬
+      Investigaciones culturales y comunitarias &nbsp;&nbsp;📄 Documentos descargables disponibles &nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-badge">📚 Investigación & Documentación</div>
+    <h1><em>CEDOC</em> Carnavalero</h1>
+    <p>Centro de documentación e investigación sobre banda, baile y figura. Ensayos, investigaciones y reflexiones
+      culturales que construyen el pensamiento carnavalero.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="strip-stat"><span class="s-num">48</span><span class="s-label">Investigaciones</span></div>
+    <div class="strip-stat"><span class="s-num">120</span><span class="s-label">Documentos</span></div>
+    <div class="strip-stat"><span class="s-num">15</span><span class="s-label">Autores</span></div>
+    <div class="strip-stat"><span class="s-num">3</span><span class="s-label">Líneas temáticas</span></div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">Todos</button>
+    <button class="filter-tab" data-filter="banda">🎺 Banda</button>
+    <button class="filter-tab" data-filter="baile">💃 Baile</button>
+    <button class="filter-tab" data-filter="figura">🎭 Figura</button>
+    <button class="filter-tab" data-filter="historia">📜 Historia</button>
+    <button class="filter-tab" data-filter="comunidad">🏘️ Comunidad</button>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <div class="cedoc-layout">
+
+      <!-- COLUMNA PRINCIPAL -->
+      <div class="cedoc-main">
+
+        <!-- ARTÍCULOS DESTACADOS -->
+        <section>
+          <h2>✦ Artículos Destacados</h2>
+
+          <div class="article-card reveal" data-tags="banda historia">
+            <div class="article-icon">🎺</div>
+            <div class="article-body">
+              <h3>La murga chilena y sus raíces rioplatenses</h3>
+              <p>Ensayo comparativo sobre los orígenes de la murga en el Cono Sur y su adaptación a la realidad barrial
+                santiaguina. Analiza ritmos, instrumentación y prácticas colectivas desde 1980 hasta la actualidad.</p>
+              <div class="article-meta">
+                <span class="meta-tag">Banda</span>
+                <span class="meta-tag">Historia</span>
+                <span class="meta-tag">2024</span>
+                <span class="meta-tag">22 págs.</span>
+              </div>
+              <a href="#" class="download-btn">⬇ Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="article-card reveal" data-tags="baile figura">
+            <div class="article-icon" style="background:linear-gradient(135deg,var(--turquesa),var(--verde))">💃</div>
+            <div class="article-body">
+              <h3>Cuerpo, ritmo y comunidad: el baile en el carnaval popular</h3>
+              <p>Investigación etnográfica sobre el rol del cuerpo en el carnaval callejero. Entrevistas con 30
+                bailarinas y bailarines de Chinchintirapie sobre su experiencia y transformación personal a través de la
+                danza.</p>
+              <div class="article-meta">
+                <span class="meta-tag">Baile</span>
+                <span class="meta-tag">Figura</span>
+                <span class="meta-tag">Comunidad</span>
+                <span class="meta-tag">2023</span>
+              </div>
+              <a href="#" class="download-btn">⬇ Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="article-card reveal" data-tags="figura historia">
+            <div class="article-icon" style="background:linear-gradient(135deg,var(--amarillo),var(--dorado))">🎭</div>
+            <div class="article-body">
+              <h3>La figura carnavalera como dispositivo político</h3>
+              <p>Reflexión teórica sobre cómo el vestuario, la máscara y el personaje carnavalero operan como formas de
+                crítica social y subversión cultural en el espacio público latinoamericano.</p>
+              <div class="article-meta">
+                <span class="meta-tag">Figura</span>
+                <span class="meta-tag">Historia</span>
+                <span class="meta-tag">2022</span>
+                <span class="meta-tag">18 págs.</span>
+              </div>
+              <a href="#" class="download-btn">⬇ Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="article-card reveal" data-tags="comunidad historia">
+            <div class="article-icon" style="background:linear-gradient(135deg,#8e44ad,#6c3483)">🏘️</div>
+            <div class="article-body">
+              <h3>Carnaval y transformación barrial: 20 años en Nono 380</h3>
+              <p>Estudio de caso sobre el impacto comunitario de Chinchintirapie en el barrio. Mapeo de redes sociales,
+                participación vecinal y transformación del espacio urbano a través de la práctica carnavalera.</p>
+              <div class="article-meta">
+                <span class="meta-tag">Comunidad</span>
+                <span class="meta-tag">Historia</span>
+                <span class="meta-tag">2024</span>
+                <span class="meta-tag">35 págs.</span>
+              </div>
+              <a href="#" class="download-btn">⬇ Descargar PDF</a>
+            </div>
+          </div>
+
+          <div class="article-card reveal" data-tags="banda baile">
+            <div class="article-icon" style="background:linear-gradient(135deg,var(--naranja),var(--rojo))">🥁</div>
+            <div class="article-body">
+              <h3>Percusión colectiva: el bombo como articulador social</h3>
+              <p>Análisis musicológico y social del rol del bombo en la murga popular. Incluye transcripciones rítmicas,
+                entrevistas con percusionistas y reflexiones sobre la escucha colectiva como práctica democrática.</p>
+              <div class="article-meta">
+                <span class="meta-tag">Banda</span>
+                <span class="meta-tag">Baile</span>
+                <span class="meta-tag">2021</span>
+                <span class="meta-tag">28 págs.</span>
+              </div>
+              <a href="#" class="download-btn">⬇ Descargar PDF</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- INVESTIGACIONES EN CURSO -->
+        <section>
+          <h2>🔬 Investigaciones en Curso</h2>
+
+          <div class="article-card reveal" data-tags="baile figura">
+            <div class="article-icon" style="background:linear-gradient(135deg,#2c3e50,#34495e)">📝</div>
+            <div class="article-body">
+              <h3>Memoria corporal y transmisión oral en la danza andina</h3>
+              <p>Investigación en desarrollo sobre cómo se transmite el conocimiento coreográfico en la escuela.
+                Metodología participante con registro en video y entrevistas generacionales.</p>
+              <div class="article-meta">
+                <span class="meta-tag">En proceso</span>
+                <span class="meta-tag">Baile</span>
+                <span class="meta-tag">Figura</span>
+                <span class="meta-tag">2025–2026</span>
+              </div>
+              <a href="#" class="download-btn" style="background:var(--dorado);color:var(--oscuro)">👁 Ver avance</a>
+            </div>
+          </div>
+
+          <div class="article-card reveal" data-tags="comunidad banda">
+            <div class="article-icon" style="background:linear-gradient(135deg,var(--verde),#0e6655)">🌍</div>
+            <div class="article-body">
+              <h3>Carnaval latinoamericano en diáspora: redes y territorios</h3>
+              <p>Mapeo de escuelas carnavaleras en Chile, Argentina, Uruguay y Colombia. Análisis de intercambios,
+                influencias cruzadas y construcción de identidad latinoamericana en el exilio.</p>
+              <div class="article-meta">
+                <span class="meta-tag">En proceso</span>
+                <span class="meta-tag">Comunidad</span>
+                <span class="meta-tag">Banda</span>
+                <span class="meta-tag">2025</span>
+              </div>
+              <a href="#" class="download-btn" style="background:var(--dorado);color:var(--oscuro)">👁 Ver avance</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="cedoc-sidebar">
+
+        <!-- LÍNEA DE TIEMPO -->
+        <div class="sidebar-widget reveal">
+          <h3>⏳ Línea de Tiempo Cultural</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2004</div>
+              <p>Fundación de Chinchintirapie. Primeros ensayos en Nono 380 con 12 integrantes.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2007</div>
+              <p>Primer desfile callejero oficial. Nace el formato de carnaval barrial con tres cuerpos.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2010</div>
+              <p>Se formaliza la escuela con talleres permanentes de percusión, danza y vestuario.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2012</div>
+              <p>Primera investigación académica sobre la murga. Alianza con universidad local.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2015</div>
+              <p>Décimo aniversario. Gran desfile con 200 participantes. Publicación del primer cuaderno de la escuela.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2018</div>
+              <p>Nace el CEDOC como espacio de documentación y reflexión sistemática.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2020</div>
+              <p>Carnaval virtual durante pandemia. Adaptación digital y producción de podcasts.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2022</div>
+              <p>Retorno a la calle. Primer Festival Internacional de Murga organizado por la escuela.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <p>Veinte aniversario. Publicación del libro "20 años de carnaval en la calle".</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2026</div>
+              <p>Temporada actual. Nuevas investigaciones en curso y ampliación del archivo digital.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOCUMENTOS DESCARGABLES -->
+        <div class="sidebar-widget reveal">
+          <h3>📄 Descargas Rápidas</h3>
+          <div style="display:flex;flex-direction:column;gap:.7rem">
+            <a href="#" class="download-btn" style="justify-content:space-between">
+              <span>📗 Cuaderno de la Escuela Vol. 1</span>
+              <span style="font-size:.7rem;opacity:.7">PDF · 4.2MB</span>
+            </a>
+            <a href="#" class="download-btn" style="justify-content:space-between">
+              <span>📘 Cuaderno de la Escuela Vol. 2</span>
+              <span style="font-size:.7rem;opacity:.7">PDF · 5.8MB</span>
+            </a>
+            <a href="#" class="download-btn" style="justify-content:space-between">
+              <span>📙 Glosario Carnavalero</span>
+              <span style="font-size:.7rem;opacity:.7">PDF · 1.1MB</span>
+            </a>
+            <a href="#" class="download-btn"
+              style="justify-content:space-between;background:var(--dorado);color:var(--oscuro)">
+              <span>📕 Libro 20 Aniversario</span>
+              <span style="font-size:.7rem;opacity:.7">PDF · 12MB</span>
+            </a>
+            <a href="#" class="download-btn" style="justify-content:space-between">
+              <span>🗺 Mapa de Escuelas Latam</span>
+              <span style="font-size:.7rem;opacity:.7">PDF · 2.3MB</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- TEMAS -->
+        <div class="sidebar-widget reveal">
+          <h3>🏷 Temas de Investigación</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Murga</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Percusión</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Danza Andina</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Vestuario</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Teatro Callejero</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Memoria</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Comunidad</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Identidad</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Género</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Territorio</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Oralidad</span>
+            <span class="meta-tag" style="font-size:.82rem;padding:.3rem .7rem">Corporalidad</span>
+          </div>
+        </div>
+
+        <!-- COLABORA -->
+        <div class="sidebar-widget reveal" style="background:var(--oscuro);border:2px solid var(--dorado)">
+          <h3 style="color:var(--amarillo)">✉ Envía tu Investigación</h3>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:1rem">¿Tienes una
+            investigación, ensayo o reflexión sobre carnaval y cultura popular? El CEDOC recibe colaboraciones externas.
+          </p>
+          <a href="mailto:cedoc@chinchintirapie.mx" class="download-btn"
+            style="background:var(--rojo);color:#fff;display:block;text-align:center">📨 Enviar propuesta</a>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Chinchintirapie</span>
+        <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la
+          calle junto a la comunidad.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#">📘</a>
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">▶️</a>
+          <a class="social-btn" href="#">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Escuela</h4>
+        <ul>
+          <li><a href="index.html#historia">Historia</a></li>
+          <li><a href="index.html#organizacion">Organización</a></li>
+          <li><a href="index.html#organizacion">Nuestros talleres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Archivo</h4>
+        <ul>
+          <li><a href="repositorio.html">Repositorio</a></li>
+          <li><a href="cedoc.html">CEDOC</a></li>
+          <li><a href="material-educativo.html">Material Educativo</a></li>
+          <li><a href="index.html#cronicas">Crónicas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Donaciones</a></li>
+          <li><a href="#">Únete a la murga</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+    </div>
+  </footer>
+
+  <script src="../asset/js/main.js"></script>
+  <script src="../asset/js/cedoc.js"></script>
+</body>
+
+</html>
