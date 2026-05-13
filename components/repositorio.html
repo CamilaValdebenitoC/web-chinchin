@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repositorio Audiovisual – Chinchintirapie</title>
+  <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../asset/css/styles.css">
+</head>
+
+<body>
+
+      <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+            </div>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
+            </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="has-dropdown">
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
+                </div>
+            </li>
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
+        </ul>
+    </nav>
+
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <span class="ticker-inner">
+      📂 Repositorio Audiovisual 2007–2026 &nbsp;&nbsp;🎞️ Más de 500 registros documentales &nbsp;&nbsp;📸 Fotografías
+      · Videos · Grabaciones &nbsp;&nbsp;🎭 20 años de memoria carnavalera &nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-badge">📂 Archivo Histórico</div>
+    <h1>Repositorio <em>Audiovisual</em></h1>
+    <p>Veinte años de carnaval documentados: fotografías, videos, grabaciones y registros de cada edición desde 2007
+      hasta hoy.</p>
+  </div>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="strip-stat"><span class="s-num">500+</span><span class="s-label">Registros</span></div>
+    <div class="strip-stat"><span class="s-num">20</span><span class="s-label">Años</span></div>
+    <div class="strip-stat"><span class="s-num">12</span><span class="s-label">Desfiles</span></div>
+    <div class="strip-stat"><span class="s-num">3</span><span class="s-label">Formatos</span></div>
+  </div>
+
+  <!-- BUSCADOR -->
+  <div class="search-bar-wrap">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Buscar por año, evento, disciplina..." />
+      <button onclick="filterContent()">Buscar</button>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filter-tabs" id="filterTabs">
+    <button class="filter-tab active" data-filter="all">Todos</button>
+    <button class="filter-tab" data-filter="foto">📸 Fotos</button>
+    <button class="filter-tab" data-filter="video">🎬 Videos</button>
+    <button class="filter-tab" data-filter="audio">🎵 Audio</button>
+    <button class="filter-tab" data-filter="desfile">🎭 Desfiles</button>
+    <button class="filter-tab" data-filter="ensayo">🥁 Ensayos</button>
+    <button class="filter-tab" data-filter="taller">💃 Talleres</button>
+  </div>
+
+  <!-- AÑOS -->
+  <main id="contentArea">
+
+    <!-- 2024–2026 -->
+    <section class="year-section reveal">
+      <div class="year-header" style="max-width:1200px;margin:0 auto">
+        <div class="year-label">2026</div>
+        <div class="year-line"></div>
+        <span style="font-family:'Boogaloo',cursive;font-size:1rem;color:#7a5c40;white-space:nowrap">Temporada
+          vigente</span>
+      </div>
+      <div class="media-grid" style="max-width:1200px;margin:0 auto">
+
+        <div class="media-card reveal" data-tags="foto desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--rojo),var(--naranja))">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Desfile de Carnaval 2026</h4>
+            <p>Nono 380 · Febrero 2026</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="video desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--turquesa),var(--verde))">
+            🎬
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Registro completo – Desfile 2026</h4>
+            <p>Duración: 42 min</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--amarillo),var(--dorado))">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Ensayo General Enero 2026</h4>
+            <p>Sala de ensayos · 80 fotos</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="audio ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#8e44ad,#6c3483)">
+            🎵
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Audio</span>
+            <h4>Grabación percusión – Murga 2026</h4>
+            <p>Duración: 18 min · MP3</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2024 -->
+    <section class="year-section reveal" style="background:#fff">
+      <div class="year-header" style="max-width:1200px;margin:0 auto">
+        <div class="year-label">2024</div>
+        <div class="year-line"></div>
+      </div>
+      <div class="media-grid" style="max-width:1200px;margin:0 auto">
+
+        <div class="media-card reveal" data-tags="video desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--rojo),#8e44ad)">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Desfile Carnaval Aniversario 20</h4>
+            <p>Duración: 1h 15min</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--naranja),var(--amarillo))">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Galería 20 Aniversario</h4>
+            <p>240 fotografías · Alta resolución</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="video taller">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--verde),var(--turquesa))">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Documental: Danza Andina 2024</h4>
+            <p>Duración: 28 min</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto taller">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#c0392b,#922b21)">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Taller Diseño de Vestuario</h4>
+            <p>Serie documental · 95 fotos</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="audio ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--dorado),var(--naranja))">
+            🎵
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Audio</span>
+            <h4>Registro sonoro Murga 20 Años</h4>
+            <p>Duración: 35 min · WAV</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="video ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#2471a3,#1a5276)">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Ensayos Percusión – Temporada 24</h4>
+            <p>Serie: 6 episodios · 20 min c/u</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2020 -->
+    <section class="year-section reveal">
+      <div class="year-header" style="max-width:1200px;margin:0 auto">
+        <div class="year-label">2020</div>
+        <div class="year-line"></div>
+        <span style="font-family:'Boogaloo',cursive;font-size:1rem;color:#7a5c40;white-space:nowrap">Edición virtual ·
+          Pandemia</span>
+      </div>
+      <div class="media-grid" style="max-width:1200px;margin:0 auto">
+
+        <div class="media-card reveal" data-tags="video taller">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#2c3e50,#34495e)">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Carnaval Virtual – Streaming 2020</h4>
+            <p>Duración: 2h 10min</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--turquesa),#0e6655)">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Ensayos en Pandemia</h4>
+            <p>Registro de adaptación · 60 fotos</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="audio taller">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#d35400,#e67e22)">
+            🎵
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Audio</span>
+            <h4>Podcast: Historia de la Murga</h4>
+            <p>Serie: 4 episodios · 25 min c/u</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2015 -->
+    <section class="year-section reveal" style="background:#fff">
+      <div class="year-header" style="max-width:1200px;margin:0 auto">
+        <div class="year-label">2015</div>
+        <div class="year-line"></div>
+        <span style="font-family:'Boogaloo',cursive;font-size:1rem;color:#7a5c40;white-space:nowrap">Décimo
+          aniversario</span>
+      </div>
+      <div class="media-grid" style="max-width:1200px;margin:0 auto">
+
+        <div class="media-card reveal" data-tags="video desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#c0392b,var(--dorado))">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Gran Desfile 10° Aniversario</h4>
+            <p>Duración: 58 min · Digitalizado</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,var(--verde),var(--amarillo))">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Galería 10 Años en la Calle</h4>
+            <p>180 fotos · Digitalizado desde analógico</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="audio ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#8e44ad,var(--naranja))">
+            🎵
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Audio</span>
+            <h4>Grabación en vivo – Plaza 2015</h4>
+            <p>Duración: 50 min · Restaurado</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2007-2010 -->
+    <section class="year-section reveal">
+      <div class="year-header" style="max-width:1200px;margin:0 auto">
+        <div class="year-label">2007</div>
+        <div class="year-line"></div>
+        <span style="font-family:'Boogaloo',cursive;font-size:1rem;color:#7a5c40;white-space:nowrap">Archivos
+          fundacionales</span>
+      </div>
+      <div class="media-grid" style="max-width:1200px;margin:0 auto">
+
+        <div class="media-card reveal" data-tags="foto desfile">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#7f8c8d,#2c3e50)">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Primer Desfile – Los Orígenes</h4>
+            <p>Digitalizado desde película · 45 fotos</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="video ensayo">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#5d6d7e,#1c2833)">
+            🎬<div class="play-icon">▶</div>
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Video</span>
+            <h4>Primer Registro en Video – 2007</h4>
+            <p>Digitalizado desde VHS · 22 min</p>
+          </div>
+        </div>
+
+        <div class="media-card reveal" data-tags="foto taller">
+          <div class="media-thumb" style="background:linear-gradient(135deg,#a04000,#d35400)">
+            📸
+          </div>
+          <div class="media-info">
+            <span class="media-tag">Foto</span>
+            <h4>Primeros Talleres – 2008</h4>
+            <p>Restaurado · 30 fotos</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sin resultados -->
+    <div id="noResults" style="display:none;text-align:center;padding:4rem 2rem">
+      <p style="font-family:'Bangers',cursive;font-size:2rem;color:var(--rojo)">😶 Sin resultados</p>
+      <p style="color:#7a5c40;margin-top:.5rem">Intenta con otro término o categoría.</p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Chinchintirapie</span>
+        <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la
+          calle junto a la comunidad.</p>
+        <div class="social-row">
+          <a class="social-btn" href="#">📘</a>
+          <a class="social-btn" href="#">📸</a>
+          <a class="social-btn" href="#">▶️</a>
+          <a class="social-btn" href="#">🐦</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Escuela</h4>
+        <ul>
+          <li><a href="index.html#historia">Historia</a></li>
+          <li><a href="index.html#organizacion">Organización</a></li>
+          <li><a href="index.html#organizacion">Nuestros talleres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Archivo</h4>
+        <ul>
+          <li><a href="repositorio.html">Repositorio</a></li>
+          <li><a href="cedoc.html">CEDOC</a></li>
+          <li><a href="material-educativo.html">Material Educativo</a></li>
+          <li><a href="index.html#cronicas">Crónicas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Donaciones</a></li>
+          <li><a href="#">Únete a la murga</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+    </div>
+  </footer>
+
+  <script src="../asset/js/main.js"></script>
+  <script src="../asset/js/"></script>
+</body>
+
+</html>

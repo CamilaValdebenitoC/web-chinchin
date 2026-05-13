@@ -1,0 +1,103 @@
+.form-alert {
+    display: none;
+    padding: .85rem 1rem;
+    border-radius: 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: .2rem;
+    border: 2px solid transparent;
+}
+
+.form-alert.show {
+    display: block;
+}
+
+.form-alert.error {
+    background: rgba(192, 57, 43, .12);
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+.form-alert.success {
+    background: rgba(39, 174, 96, .12);
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+/* Password wrap */
+.input-password-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.input-password-wrap input {
+    width: 100%;
+    padding-right: 3rem;
+}
+
+/* Botón mostrar password */
+.toggle-pass {
+    position: absolute;
+    top: 50%;
+    right: .7rem;
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition:
+        background .2s ease,
+        transform .15s ease;
+}
+
+.toggle-pass:hover {
+    background: rgba(212, 160, 23, .14);
+}
+
+.toggle-pass:active {
+    transform: translateY(-50%) scale(.92);
+}
+
+.toggle-pass:focus {
+    outline: 2px solid var(--dorado);
+    outline-offset: 2px;
+}
+
+/* Checkbox */
+.remember-label input[type="checkbox"] {
+    accent-color: var(--rojo);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Links */
+.forgot-link {
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.forgot-link:hover {
+    opacity: .85;
+}
+
+/* Mejor separación */
+.form-aux {
+    margin-top: -.2rem;
+    margin-bottom: .2rem;
+}

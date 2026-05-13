@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organización | Chinchintirapie</title>
-    <meta name="description" content="Conoce la organización interna de Chinchintirapie, su ecosistema artístico, cuerpos de acción y áreas de trabajo.">
+    <meta name="description"
+        content="Conoce la organización interna de Chinchintirapie, su ecosistema artístico, cuerpos de acción y áreas de trabajo.">
+    <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/styles.css">
+    <link rel="stylesheet" href="../asset/css/styleorganizacion.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="asset/css/styles.css">
-    <link rel="stylesheet" href="asset/css/styleorganizacion.css">
-
-<script src="asset/js/mainOrganizacion.js" defer></script>
+    <script src="../asset/js/mainOrganizacion.js" defer></script>
 </head>
+
 <body>
-
-    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
-
-    <nav class="navbar" aria-label="Navegación principal" role="navigation">
-        <a href="index.html" class="logo-wrap">
-            <div class="logo-img" aria-hidden="true">🎭</div>
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+            </div>
             <div class="logo-text">
                 <span>Chinchintirapie</span>
                 <span>Escuela Carnavalera</span>
             </div>
         </a>
-
-        <button
-            class="hamburger"
-            id="hamburger"
-            aria-label="Abrir menú de navegación"
-            aria-expanded="false"
-            aria-controls="navLinks"
-            type="button">
-            ☰
-        </button>
-
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Inicio</a></li>
-
+            <li><a href="../index.html">Inicio</a></li>
             <li class="has-dropdown">
-                <button
-                    class="dropdown-toggle"
-                    aria-expanded="false"
-                    aria-controls="menu-escuela">
-                    Escuela <span class="caret" aria-hidden="true">▾</span>
-                </button>
-                <div class="dropdown" id="menu-escuela">
-                    <a href="index.html#historia">Historia</a>
-                    <a href="organizacion.html" aria-current="page">Organización</a>
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
                 </div>
             </li>
-
             <li class="has-dropdown">
-                <button
-                    class="dropdown-toggle"
-                    aria-expanded="false"
-                    aria-controls="menu-noticias">
-                    Noticias <span class="caret" aria-hidden="true">▾</span>
-                </button>
-                <div class="dropdown" id="menu-noticias">
-                    <a href="index.html#hitos">Hitos Recientes</a>
-                    <a href="index.html#cronicas">Crónicas</a>
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
                 </div>
             </li>
-
             <li class="has-dropdown">
-                <button
-                    class="dropdown-toggle"
-                    aria-expanded="false"
-                    aria-controls="menu-archivo">
-                    Archivo <span class="caret" aria-hidden="true">▾</span>
-                </button>
-                <div class="dropdown" id="menu-archivo">
-                    <a href="repositorio.html">📂 Repositorio</a>
-                    <a href="cedoc.html">📚 CEDOC</a>
-                    <a href="material-educativo.html">🎓 Material Educativo</a>
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
                 </div>
             </li>
-
-            <li><a href="tienda.html" class="nav-cta">Tienda / Donaciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
         </ul>
     </nav>
+
 
     <header class="page-hero">
         <div class="page-hero-badge">Ecosistema Vivo</div>
@@ -94,15 +72,19 @@
             <div class="ecosystem-content">
                 <div class="ecosystem-text">
                     <p>
-                        En la calle nacimos y en la calle vibramos. Sin embargo, lo que el público experimenta como una explosión visceral de energía y carnaval es, en realidad, el resultado de una maquinaria cultural perfectamente engranada.
+                        En la calle nacimos y en la calle vibramos. Sin embargo, lo que el público experimenta como una
+                        explosión visceral de energía y carnaval es, en realidad, el resultado de una maquinaria
+                        cultural perfectamente engranada.
                         <strong>La Chinchin no es solo una agrupación; es un ecosistema vivo.</strong>
-                        A pesar de ser una red extensa y en constante rotación, operamos bajo una organización rigurosa que nos permite sostener nuestro arte a lo largo del tiempo.
-                        Somos el testimonio de que la autogestión, cuando se hace con disciplina, crea un modelo de trabajo capaz de inspirar y servir de referencia para cualquier colectivo artístico.
+                        A pesar de ser una red extensa y en constante rotación, operamos bajo una organización rigurosa
+                        que nos permite sostener nuestro arte a lo largo del tiempo.
+                        Somos el testimonio de que la autogestión, cuando se hace con disciplina, crea un modelo de
+                        trabajo capaz de inspirar y servir de referencia para cualquier colectivo artístico.
                     </p>
                     <p class="intro-highlight">Así nos organizamos:</p>
                 </div>
                 <div class="ecosystem-image">
-                    <img src="asset/img/organizacion .jpeg" alt="Miembros de Chinchintirapie reunidos en círculo">
+                    <img src="../asset/img/organizacion .jpeg" alt="Miembros de Chinchintirapie reunidos en círculo">
                 </div>
             </div>
         </section>
@@ -117,31 +99,38 @@
             <div class="bodies-grid">
                 <article class="body-card">
                     <div class="body-card-img body-card-img--banda">
-                        <img src="asset/img/cuerpo_banda.jpg" alt="Cuerpo de Banda - músicos con instrumentos de viento">
+                        <img src="../asset/img/cuerpo_banda.jpg"
+                            alt="Cuerpo de Banda - músicos con instrumentos de viento">
                     </div>
                     <div class="body-card-content">
                         <h3>Cuerpo de Banda</h3>
-                        <p>El motor percusivo y melódico de nuestra identidad. Son la base rítmica implacable que marca el pulso de la calle y dirige la energía de cada intervención.</p>
+                        <p>El motor percusivo y melódico de nuestra identidad. Son la base rítmica implacable que marca
+                            el pulso de la calle y dirige la energía de cada intervención.</p>
                     </div>
                 </article>
 
                 <article class="body-card">
                     <div class="body-card-img body-card-img--baile">
-                        <img src="asset/img/cuerpo_baile.jpg" alt="Cuerpo de Baile - personas danzando con vestimentas coloridas">
+                        <img src="../asset/img/cuerpo_baile.jpg"
+                            alt="Cuerpo de Baile - personas danzando con vestimentas coloridas">
                     </div>
                     <div class="body-card-content">
                         <h3>Cuerpo de Baile</h3>
-                        <p>La manifestación física de nuestro sonido. Transforman el ritmo en movimiento vibrante, conectando directamente con la emoción del público a través de una expresión cruda y callejera.</p>
+                        <p>La manifestación física de nuestro sonido. Transforman el ritmo en movimiento vibrante,
+                            conectando directamente con la emoción del público a través de una expresión cruda y
+                            callejera.</p>
                     </div>
                 </article>
 
                 <article class="body-card">
                     <div class="body-card-img body-card-img--figurines">
-                        <img src="asset/img/cuerpo_figurines.jpg" alt="Cuerpo de Figurines - personajes teatrales con máscaras">
+                        <img src="../asset/img/cuerpo_figurines.jpg"
+                            alt="Cuerpo de Figurines - personajes teatrales con máscaras">
                     </div>
                     <div class="body-card-content">
                         <h3>Cuerpo de Figurines</h3>
-                        <p>Los guardianes de la mística, la sátira y la memoria. A través de su estética y teatralidad, encarnan el alma histórica de La Chinchin, recordando de dónde venimos.</p>
+                        <p>Los guardianes de la mística, la sátira y la memoria. A través de su estética y teatralidad,
+                            encarnan el alma histórica de La Chinchin, recordando de dónde venimos.</p>
                     </div>
                 </article>
             </div>
@@ -159,37 +148,44 @@
             <div class="internal-grid">
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">💰</span> Autogestión</h3>
-                    <p>El motor de nuestra independencia. Diseñan las estrategias financieras y logísticas que aseguran la viabilidad y proyección del colectivo.</p>
+                    <p>El motor de nuestra independencia. Diseñan las estrategias financieras y logísticas que aseguran
+                        la viabilidad y proyección del colectivo.</p>
                 </article>
 
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">🔍</span> Investigación</h3>
-                    <p>Los arqueólogos de nuestra cultura. Rescatan, analizan y documentan saberes mediante metodologías propias para que nuestra propuesta tenga raíz.</p>
+                    <p>Los arqueólogos de nuestra cultura. Rescatan, analizan y documentan saberes mediante metodologías
+                        propias para que nuestra propuesta tenga raíz.</p>
                 </article>
 
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">🎓</span> Pedagogía</h3>
-                    <p>La academia de la calle. A través de sistemas de enseñanza exclusivos, forman a las nuevas generaciones asegurando que la técnica se herede.</p>
+                    <p>La academia de la calle. A través de sistemas de enseñanza exclusivos, forman a las nuevas
+                        generaciones asegurando que la técnica se herede.</p>
                 </article>
 
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">🎨</span> Diseño</h3>
-                    <p>Los arquitectos de nuestra identidad visual. Traducen nuestro sonido y nuestra furia en colores, formas y estéticas que impactan.</p>
+                    <p>Los arquitectos de nuestra identidad visual. Traducen nuestro sonido y nuestra furia en colores,
+                        formas y estéticas que impactan.</p>
                 </article>
 
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">📢</span> Comunicaciones</h3>
-                    <p>La voz del colectivo. Proyectan nuestra narrativa hacia el mundo, conectando a La Chinchin con la audiencia y los festivales.</p>
+                    <p>La voz del colectivo. Proyectan nuestra narrativa hacia el mundo, conectando a La Chinchin con la
+                        audiencia y los festivales.</p>
                 </article>
 
                 <article class="gear-item">
                     <h3><span class="gear-icon" aria-hidden="true">📋</span> Protocolo</h3>
-                    <p>El rigor operativo. Garantizan que cada presentación, viaje o interacción externa cumpla con los más altos estándares de profesionalismo.</p>
+                    <p>El rigor operativo. Garantizan que cada presentación, viaje o interacción externa cumpla con los
+                        más altos estándares de profesionalismo.</p>
                 </article>
 
                 <article class="gear-item gear-item--highlight">
                     <h3><span class="gear-icon" aria-hidden="true">❤️</span> Cariñitos</h3>
-                    <p>El corazón de La Chinchin. Equipo de bienestar interno dedicado a cuidar nuestra gente, mejorar la convivencia y asegurar que seamos una familia sana.</p>
+                    <p>El corazón de La Chinchin. Equipo de bienestar interno dedicado a cuidar nuestra gente, mejorar
+                        la convivencia y asegurar que seamos una familia sana.</p>
                 </article>
             </div>
         </section>
@@ -199,7 +195,8 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <span class="brand-name">Chinchintirapie</span>
-                <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la fiesta en la calle junto a la comunidad.</p>
+                <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la
+                    fiesta en la calle junto a la comunidad.</p>
                 <div class="social-row">
                     <a class="social-btn" href="#" aria-label="Facebook">📘</a>
                     <a class="social-btn" href="#" aria-label="Instagram">📸</a>
@@ -238,5 +235,7 @@
             <p>© 2026 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
         </div>
     </footer>
+    <script src="../asset/js/main.js"></script>
 </body>
+
 </html>

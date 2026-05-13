@@ -1,0 +1,379 @@
+/* =========================
+   MAIN - HISTORIA CHINCHIN
+   SOLO ESTILOS DEL MAIN
+========================= */
+
+/* ===== CONTENEDOR ===== */
+
+#contenido .container-xl {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== HERO ===== */
+
+#contenido .hero-history {
+  padding: 6rem 0 4rem;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(212, 160, 23, 0.18),
+      transparent 30%),
+    radial-gradient(circle at bottom right,
+      rgba(192, 57, 43, 0.14),
+      transparent 34%),
+    #FDF6E3;
+}
+
+#contenido .hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 2rem;
+  align-items: end;
+}
+
+#contenido .eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #C0392B;
+  margin-bottom: 1rem;
+}
+
+#contenido .hero-copy h1 {
+  font-family: 'Boogaloo', cursive;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  color: #2C1A0E;
+}
+
+#contenido .lead-text {
+  max-width: 58ch;
+  color: #5a3e2b;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+#contenido .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#contenido .btn-story {
+  padding: 0.9rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+#contenido .btn-primary-story {
+  background: #C0392B;
+  color: white;
+}
+
+#contenido .btn-primary-story:hover {
+  background: #E67E22;
+}
+
+#contenido .btn-outline-story {
+  border: 1px solid rgba(44, 26, 14, 0.15);
+  background: white;
+  color: #2C1A0E;
+}
+
+#contenido .btn-outline-story:hover {
+  border-color: #C0392B;
+  color: #C0392B;
+}
+
+/* ===== PANEL FRASE ===== */
+
+#contenido .hero-panel {
+  background: linear-gradient(180deg,
+      #fff9ed,
+      #ffffff);
+
+  border: 1px solid rgba(44, 26, 14, 0.15);
+  border-radius: 2rem;
+
+  padding: 2rem;
+
+  box-shadow: 0 18px 40px rgba(74, 36, 28, 0.12);
+}
+
+#contenido .quote-intro {
+  color: #C0392B;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-family: 'Boogaloo', cursive;
+}
+
+#contenido .quote-body {
+  color: #5a3e2b;
+  margin-bottom: 1.5rem;
+}
+
+#contenido .quote-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: #8b6b55;
+
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#contenido .quote-footer span {
+  width: 3rem;
+  height: 1px;
+  background: #C0392B;
+}
+
+/* ===== SECCIONES ===== */
+
+#contenido .section-shell {
+  padding: 5rem 0;
+}
+
+#contenido .section-dark {
+  background: linear-gradient(180deg,
+      #ffffff,
+      #f5e8c7);
+}
+
+#contenido .section-head {
+  margin-bottom: 3rem;
+  max-width: 70ch;
+}
+
+#contenido .section-head h2 {
+  font-family: 'Boogaloo', cursive;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+  color: #2C1A0E;
+}
+
+#contenido .section-text {
+  color: #5a3e2b;
+}
+
+#contenido .narrow-head {
+  max-width: 48rem;
+}
+
+/* ===== HISTORIA ===== */
+
+#contenido .editorial-block {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+#contenido .story-card {
+  grid-column: span 4;
+
+  background: white;
+
+  border: 1px solid rgba(44, 26, 14, 0.15);
+  border-radius: 1.4rem;
+
+  padding: 2rem;
+
+  box-shadow: 0 8px 18px rgba(74, 36, 28, 0.08);
+}
+
+#contenido .story-card-feature {
+  grid-column: span 7;
+
+  background: linear-gradient(180deg,
+      #fff9ed,
+      white);
+}
+
+#contenido .wide-card {
+  grid-column: span 8;
+}
+
+#contenido .accent-card {
+  background: linear-gradient(180deg,
+      rgba(192, 57, 43, 0.12),
+      white);
+}
+
+#contenido .story-card h3 {
+  font-family: 'Boogaloo', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2C1A0E;
+}
+
+#contenido .story-card p {
+  color: #5a3e2b;
+}
+
+/* ===== MISION Y VISION ===== */
+
+#contenido .purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+#contenido .purpose-card {
+  background: #fff9ed;
+
+  border: 1px solid rgba(44, 26, 14, 0.15);
+  border-radius: 2rem;
+
+  padding: 2.5rem;
+
+  box-shadow: 0 8px 18px rgba(74, 36, 28, 0.08);
+}
+
+#contenido .purpose-tag {
+  display: inline-flex;
+
+  padding: 0.4rem 0.9rem;
+
+  border-radius: 9999px;
+
+  background: rgba(212, 160, 23, 0.12);
+  color: #D4A017;
+
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  margin-bottom: 1.2rem;
+}
+
+#contenido .purpose-card h3 {
+  font-family: 'Boogaloo', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2C1A0E;
+}
+
+#contenido .purpose-card p {
+  color: #5a3e2b;
+}
+
+/* ===== CARRUSEL ===== */
+
+#contenido .custom-carousel {
+  border-radius: 2rem;
+  overflow: hidden;
+
+  box-shadow: 0 28px 60px rgba(74, 36, 28, 0.16);
+
+  background: white;
+}
+
+#contenido .custom-carousel .carousel-item img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+#contenido .custom-caption {
+  left: 6%;
+  right: 6%;
+  bottom: 2.5rem;
+
+  text-align: left;
+
+  padding: 1.5rem;
+
+  border-radius: 1.4rem;
+
+  background: linear-gradient(180deg,
+      rgba(24, 12, 10, 0.16),
+      rgba(24, 12, 10, 0.72));
+
+  backdrop-filter: blur(8px);
+}
+
+#contenido .custom-caption span {
+  display: inline-block;
+
+  margin-bottom: 0.5rem;
+
+  color: #ffe7bf;
+
+  font-size: 0.8rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+#contenido .custom-caption h3 {
+  font-family: 'Boogaloo', cursive;
+
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+
+  color: #fff7ef;
+
+  margin-bottom: 0.5rem;
+}
+
+#contenido .custom-caption p {
+  color: rgba(255, 247, 239, 0.88);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+
+  #contenido .hero-grid,
+  #contenido .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contenido .editorial-block {
+    grid-template-columns: 1fr;
+  }
+
+  #contenido .story-card,
+  #contenido .story-card-feature,
+  #contenido .wide-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #contenido .hero-history {
+    padding-top: 4rem;
+  }
+
+  #contenido .hero-panel,
+  #contenido .purpose-card,
+  #contenido .story-card,
+  #contenido .custom-caption {
+    padding: 1.5rem;
+  }
+
+  #contenido .custom-caption {
+    position: static;
+
+    margin: 1rem;
+
+    background: white;
+    color: #2C1A0E;
+  }
+
+  #contenido .custom-caption h3,
+  #contenido .custom-caption p,
+  #contenido .custom-caption span {
+    color: inherit;
+  }
+
+  #contenido .custom-carousel .carousel-item img {
+    aspect-ratio: 4 / 3;
+  }
+}

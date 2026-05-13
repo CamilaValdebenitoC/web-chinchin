@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto – Chinchintirapie</title>
+    <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Boogaloo&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/styles.css">
+    <link rel="stylesheet" href="../asset/css/stylecontacto.css">
+</head>
+
+<body>
+
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+            </div>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
+            </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="has-dropdown">
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
+                </div>
+            </li>
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="cnt-wrap">
+            <div class="cnt-hero">
+                <h1>Chinchintirapie</h1>
+                <p>Escuela carnavalera · Escríbenos, que la fiesta empieza con un mensaje</p>
+            </div>
+
+            <div class="info-box">
+                <p>📧 Correo: <a href="mailto:chinchintirapie@gmail.com">chinchintirapie@gmail.com</a></p>
+            </div>
+
+            <div class="contact-form-box">
+                <!-- 1. En la etiqueta form agregamos 'novalidate' para que el JS tome el control -->
+                <form action="guardar_contacto.php" method="POST" class="portal-form" novalidate>
+                    <h3 class="mb-3">🎭 Formulario de Contacto</h3>
+
+                    <div class="form-group mb-3">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <!-- 2. Asegúrate de que el input tenga la clase 'form-control' -->
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Tu nombre"
+                            required>
+
+                        <!-- 3. AGREGAR ESTO: Bootstrap lo muestra solo si hay error -->
+                        <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="tu@email.com"
+                            required>
+
+                        <!-- 3. AGREGAR ESTO: Mensaje específico para el correo -->
+                        <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="telefono" class="form-label">Teléfono (Opcional)</label>
+                        <input type="tel" name="telefono" id="telefono" class="form-control"
+                            placeholder="+56 9 1234 5678">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <input type="text" name="asunto" id="asunto" class="form-control"
+                            placeholder="Escribe el asunto" required>
+                        <div class="invalid-feedback">El asunto es obligatorio para procesar tu mensaje.</div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control" rows="6"
+                            placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <div class="invalid-feedback">¡No olvides escribir tu mensaje!</div>
+                    </div>
+
+                    <!-- 4. El botón con clases de Bootstrap para que se vea bien -->
+                    <button type="submit" class="btn-contacto btn btn-primary w-100 py-2">
+                        ENVIAR MENSAJE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">Chinchintirapie</span>
+                <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la
+                    fiesta en la calle junto a la comunidad.</p>
+                <div class="social-row">
+                    <a class="social-btn" href="#">📘</a>
+                    <a class="social-btn" href="#">📸</a>
+                    <a class="social-btn" href="#">▶️</a>
+                    <a class="social-btn" href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Escuela</h4>
+                <ul>
+                    <li><a href="../index.html#historia">Historia</a></li>
+                    <li><a href="organizacion.html">Organización</a></li>
+                    <li><a href="#">Nuestros talleres</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Archivo</h4>
+                <ul>
+                    <li><a href="repositorio.html">Repositorio</a></li>
+                    <li><a href="cedoc.html">CEDOC</a></li>
+                    <li><a href="material-educativo.html">Material Educativo</a></li>
+                    <li><a href="../index.html#cronicas">Crónicas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="tienda">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="#">Únete a la murga</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+        </div>
+    </footer>
+
+    <script src="../asset/js/main.js"></script>
+    <script src="../asset/js/code.js"></script>
+
+</body>
+
+</html>

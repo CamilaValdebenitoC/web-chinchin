@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda y Donaciones - La Chinchin</title>
+    <link rel="icon" href="../asset/img/logo-chinchitirapie.png" type="image/png">
 
     <!-- Fuentes de Google de styles.css -->
     <link
@@ -12,14 +13,54 @@
         rel="stylesheet">
 
     <!-- CSS global -->
-    <link rel="stylesheet" href="asset/css/styles.css">
+    <link rel="stylesheet" href="../asset/css/styles.css">
     <!-- El CSS específico de esta sección -->
-    <link rel="stylesheet" href="asset/css/styleTienda.css">
+    <link rel="stylesheet" href="../asset/css/styleTienda.css">
 </head>
 
 <body>
+        <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie">
+            </div>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
+            </div>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Inicio</a></li>
+            <li class="has-dropdown">
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
+                </div>
+            </li>
+            <li class="has-dropdown">
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
+                </div>
+            </li>
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
+        </ul>
+    </nav>
 
-    <!-- NAVBAR (Opcional, copiando el header base, pero por ahora solo main) -->
     <!-- Contenedor principal -->
     <main>
         <!-- 
@@ -47,8 +88,7 @@
                         <article class="product-card">
                             <div class="product-card__image-wrapper">
                                 <span class="product-card__badge" aria-label="Edición Limitada">Edición Limitada</span>
-                                <img class="product-card__img"
-                                    src="https://via.placeholder.com/400x500/C0392B/FFFFFF?text=Polera+20+A%C3%B1os"
+                                <img class="product-card__img" src="../asset/img/polera.png"
                                     alt="Polera conmemorativa de 20 años de Chinchintirapie" loading="lazy">
                             </div>
                             <div class="product-card__content">
@@ -63,8 +103,7 @@
                         <article class="product-card">
                             <div class="product-card__image-wrapper">
                                 <span class="product-card__badge" aria-label="Edición Limitada">Edición Limitada</span>
-                                <img class="product-card__img"
-                                    src="https://via.placeholder.com/400x500/16A085/FFFFFF?text=Poler%C3%B3n+Oficial"
+                                <img class="product-card__img" src="../asset/img/poleron.png"
                                     alt="Polerón oficial de escuela carnavalera" loading="lazy">
                             </div>
                             <div class="product-card__content">
@@ -128,6 +167,55 @@
         <!-- Fin de la Sección Solicitada -->
     </main>
 
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name">Chinchintirapie</span>
+                <p>Escuela carnavalera comprometida con la cultura popular latinoamericana. Veinte años haciendo la
+                    fiesta en la
+                    calle junto a la comunidad.</p>
+                <div class="social-row">
+                    <a class="social-btn" href="#">📘</a>
+                    <a class="social-btn" href="#">📸</a>
+                    <a class="social-btn" href="#">▶️</a>
+                    <a class="social-btn" href="#">🐦</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Escuela</h4>
+                <ul>
+                    <li><a href="index.html#historia">Historia</a></li>
+                    <li><a href="index.html#organizacion">Organización</a></li>
+                    <li><a href="index.html#organizacion">Nuestros talleres</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Archivo</h4>
+                <ul>
+                    <li><a href="repositorio.html">Repositorio</a></li>
+                    <li><a href="cedoc.html">CEDOC</a></li>
+                    <li><a href="material-educativo.html">Material Educativo</a></li>
+                    <li><a href="index.html#cronicas">Crónicas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@chinchintirapie.mx">info@chinchintirapie.mx</a></li>
+                    <li><a href="#">Tienda</a></li>
+                    <li><a href="#">Donaciones</a></li>
+                    <li><a href="#">Únete a la murga</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
+        </div>
+    </footer>
+
+    <script src="../asset/js/main.js"></script>
+    <script src="../asset/js/scriptHistoria.js"></script>
 </body>
 
 </html>
