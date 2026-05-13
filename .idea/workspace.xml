@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02404c5f-88e7-4efa-be55-bd63f7720d65" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/asset/css/cronicas.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/cronicas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/img7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cronicas.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/cronicas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/noticias.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/noticias.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../../../../../../xampp/php/php.exe" />
+  <component name="ProblemsViewState">
+    <option name="autoscrollToSource" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3DXSw3Hvs8bvX196sHCPD51aHle" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "version-actualizada",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matia\OneDrive\Desktop\Matias\Programacion\Bootcamp\Forks\web-chinchin\asset\img" />
+      <recent name="C:\Users\matia\OneDrive\Desktop\Matias\Programacion\Bootcamp\Forks\web-chinchin\noticias" />
+      <recent name="C:\Users\matia\OneDrive\Desktop\Matias\Programacion\Bootcamp\Forks\web-chinchin\cronicas" />
+      <recent name="C:\Users\matia\OneDrive\Desktop\Matias\Programacion\Bootcamp\Forks\web-chinchin\img" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02404c5f-88e7-4efa-be55-bd63f7720d65" name="Changes" comment="" />
+      <created>1778427158207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778427158207</updated>
+      <workItem from="1778427159929" duration="2524000" />
+      <workItem from="1778506430915" duration="7694000" />
+      <workItem from="1778531492438" duration="2569000" />
+      <workItem from="1778551319463" duration="5025000" />
+      <workItem from="1778557618902" duration="1960000" />
+      <workItem from="1778559753979" duration="34000" />
+      <workItem from="1778559854440" duration="5200000" />
+      <workItem from="1778595359450" duration="9028000" />
+      <workItem from="1778605116643" duration="376000" />
+      <workItem from="1778605747044" duration="294000" />
+      <workItem from="1778606058772" duration="10000" />
+      <workItem from="1778606104201" duration="14568000" />
+      <workItem from="1778642690106" duration="293000" />
+      <workItem from="1778643031858" duration="127000" />
+      <workItem from="1778643219324" duration="1240000" />
+      <workItem from="1778644725811" duration="2731000" />
+      <workItem from="1778687466292" duration="615000" />
+      <workItem from="1778694694521" duration="4073000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
