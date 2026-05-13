@@ -5,49 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chinchintirapie – Escuela Carnavalera</title>
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Pacifico&family=Nunito:wght@400;600;700;800&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/styles.css">
     <link rel="stylesheet" href="../asset/css/cronicas.css">
 </head>
-
 <body>
-<nav class="navbar">
-    <a href="logo%20chinchitirapie%20.webp" class="logo-wrap">
-        <div class="logo-img">
-            <img src="../asset/img/logo-chinchitirapie.png" alt="Logo Chinchintirapie"></div>
-        <div class="logo-text">
-            <span>Chinchintirapie</span>
-            <span>Escuela Carnavalera</span>
-        </div>
-    </a>
-
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li class="has-dropdown" id="dd-escuela">
-            <button>Escuela <span class="caret">▾</span></button>
-            <div class="dropdown">
-                <a href="#historia">Historia</a>
-                <a href="#organizacion">Organización</a>
+    <nav class="navbar">
+        <a href="../index.html" class="logo-wrap">
+            <div class="logo-img">
+                <img src="../asset/img/logo-chinchitirapie.webp" alt="Logo Chinchintirapie">
             </div>
-        </li>
-
-        <li class="has-dropdown" id="dd-noticias">
-            <button>Noticias <span class="caret">▾</span></button>
-            <div class="dropdown">
-                <a href="#hitos">Hitos Recientes</a>
-                <a href="#cronicas">Crónicas</a>
+            <div class="logo-text">
+                <span>Chinchintirapie</span>
+                <span>Escuela Carnavalera</span>
             </div>
-        </li>
+        </a>
 
-        <li class="has-dropdown" id="dd-archivo">
-            <button>Archivo <span class="caret">▾</span></button>
-            <div class="dropdown">
-                <a href="#repositorio">Repositorio</a>
-                <a href="#cedoc">CEDOC</a>
-            </div>
-        </li>
-        <li><a href="#tienda" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
+        <button class="hamburger" id="hamburger" aria-label="Menú">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Inicio</a></li>
+
+            <li class="has-dropdown">
+                <button>Escuela <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="historia.html">Historia</a>
+                    <a href="organizacion.html">Organización</a>
+                </div>
+            </li>
+
+            <li class="has-dropdown">
+                <button>Noticias <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="noticias.html">Hitos Recientes</a>
+                    <a href="cronicas.html">Crónicas</a>
+                </div>
+            </li>
+
+            <li class="has-dropdown">
+                <button>Archivo <span class="caret">▾</span></button>
+                <div class="dropdown">
+                    <a href="repositorio.html">Repositorio</a>
+                    <a href="cedoc.html">CEDOC</a>
+                    <a href="material-educativo.html">Material Educativo</a>
+                </div>
+            </li>
+
+            <li><a href="tienda.html" class="nav-cta">Tienda&nbsp;/&nbsp;Donaciones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="login.html" class="nav-login-btn">Ingresar</a></li>
+        </ul>
+    </nav>
 
 <section class="cronicas-section">
     <!-- HEADER -->
@@ -59,7 +66,7 @@
     <div class="cronicas-editorial">
         <!-- IZQUIERDA -->
         <article class="cronica-side">
-            <img src="../asset/img/img4.png" alt="Carnaval">
+            <img src="../asset/img/img4.webp" alt="Carnaval">
             <span>MEMORIA POPULAR</span>
             <h3>Todo comienza en la calle</h3>
             <p>Relatos sobre comparsas, barrios y encuentros
@@ -71,7 +78,7 @@
         </article>
         <!-- CENTRO -->
         <article class="cronica-main">
-            <img src="../asset/img/img7.png" alt="Carnaval">
+            <img src="../asset/img/img7.webp" alt="Carnaval">
             <span>CULTURA POPULAR</span>
             <h1>“El carnaval también es una forma de recordar.”</h1>
         </article>
@@ -105,7 +112,7 @@
 </section>
 
 <section class="cronica-final-banner">
-    <img src="../asset/img/img2.png" alt="Carnaval">
+    <img src="../asset/img/img2.webp" alt="Carnaval">
     <div class="cronica-final-overlay">
         <span>MEMORIA POPULAR</span>
     </div>
@@ -155,5 +162,6 @@
         <p>© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo</p>
     </div>
 </footer>
+<script src="../asset/js/main.js"></script>
 </body>
 </html>
