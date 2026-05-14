@@ -98,7 +98,10 @@ El sitio es completamente responsivo con breakpoints en:
    ```bash
    git clone https://github.com/brandondic/web-chinchin.git
    ```
-2. Abre `index.html` en tu navegador, o usa un servidor local:
+2. Abre `index.html` directamente en tu navegador, o usa un servidor local:
+
+   > **Requisito:** Tener [Node.js](https://nodejs.org/) instalado.
+
    ```bash
    npx serve .
    ```
