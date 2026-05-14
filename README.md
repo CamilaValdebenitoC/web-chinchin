@@ -137,4 +137,4 @@ El sitio es completamente responsivo con breakpoints en:
 
 ## 📝 Licencia
 
-© 2024 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo
+© 2026 Chinchintirapie – Escuela Carnavalera · Hecho con 🎭 y ritmo
