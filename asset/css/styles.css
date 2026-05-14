@@ -257,8 +257,8 @@ body::before {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(44, 26, 14, .78) 0%, rgba(192, 57, 43, .55) 50%, rgba(22, 160, 133, .4) 100%),
-    url('Gemini_Generated_Image_hoa0vehoa0vehoa0.png') center/cover no-repeat;
+    linear-gradient(135deg, rgba(44, 26, 14, .55) 0%, rgba(44, 26, 14, .3) 50%, rgba(22, 160, 133, .15) 100%),
+    url('../img/chinchintirapie-banner-index.webp') center/cover no-repeat;
   z-index: 0;
 }
 
